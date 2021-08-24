@@ -1,6 +1,7 @@
 # humanstxt.org/
 # The humans responsible & technology colophon
 # Humans have both individual and collective responsibility
+# A human is a social being
 
 # TEAM
 
