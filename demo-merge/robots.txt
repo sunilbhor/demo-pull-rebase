@@ -1,0 +1,7 @@
+-- Robots are intelligent machines
+-- Robots can be used to serve the needs of human beings
+# www.robotstxt.org
+
+# Allow crawling of all content
+User-agent: *
+Disallow:
