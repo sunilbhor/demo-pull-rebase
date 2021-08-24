@@ -1,0 +1,1303 @@
+Basics Commands:
+
+$git init  // Initialize Local Git Repository
+$git add <File Name> //Add Files to INDEX
+$git status //Check the status of Working Tree
+$git commit //Commit changes in Index
+$git push //push to remote Repository
+$git pull //Pull latest from remote Repository
+$git clone //Clone Repository into a New  
+
+Installing GIT
+Linux (Debin)
+$ sudo apt-get install git
+Linux (Fedora)
+$sudo yum install git
+Mac
+https://git-scm.com/download/msc
+Windows
+http://git-scm.com/download/win
+
+
+
+
+sunil@DESKTOP-PM5QSAH MINGW64 /c/SUNIL/Learning/GIT-GITHUB/GIT-Projects
+$ git init
+Initialized empty Git repository in C:/SUNIL/Learning/GIT-GITHUB/GIT-Projects/.g                                                                                                                it/
+
+sunil@DESKTOP-PM5QSAH MINGW64 /c/SUNIL/Learning/GIT-GITHUB/GIT-Projects (master)
+$ git remote add origin "https://github.com/sunilbhor/git-github.git"
+
+https://github.com/sunilbhor/git-github
+
+sunil@DESKTOP-PM5QSAH MINGW64 /c/SUNIL/Learning/GIT-GITHUB/GIT-Projects (master)
+$ git pull origin master
+remote: Enumerating objects: 6, done.
+remote: Counting objects: 100% (6/6), done.
+remote: Compressing objects: 100% (3/3), done.
+remote: Total 6 (delta 0), reused 0 (delta 0), pack-reused 0
+Unpacking objects: 100% (6/6), done.
+From https://github.com/sunilbhor/git-github
+ * branch            master     -> FETCH_HEAD
+ * [new branch]      master     -> origin/master
+
+sunil@DESKTOP-PM5QSAH MINGW64 /c/SUNIL/Learning/GIT-GITHUB/GIT-Projects (master)
+$ git status
+On branch master
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+
+        file1.txt
+
+nothing added to commit but untracked files present (use "git add" to track)
+
+sunil@DESKTOP-PM5QSAH MINGW64 /c/SUNIL/Learning/GIT-GITHUB/GIT-Projects (master)
+$ git add file1.txt
+
+sunil@DESKTOP-PM5QSAH MINGW64 /c/SUNIL/Learning/GIT-GITHUB/GIT-Projects (master)
+$ git status
+On branch master
+Changes to be committed:
+  (use "git reset HEAD <file>..." to unstage)
+
+        new file:   file1.txt
+
+
+sunil@DESKTOP-PM5QSAH MINGW64 /c/SUNIL/Learning/GIT-GITHUB/GIT-Projects (master)
+$ git commit -m "adding first commit to my local repo"
+
+*** Please tell me who you are.
+
+Run
+
+  git config --global user.email "you@example.com"
+  git config --global user.name "Your Name"
+
+to set your account's default identity.
+Omit --global to set the identity only in this repository.
+
+fatal: unable to auto-detect email address (got 'sunil@DESKTOP-PM5QSAH.(none)')
+
+sunil@DESKTOP-PM5QSAH MINGW64 /c/SUNIL/Learning/GIT-GITHUB/GIT-Projects (master)
+$ git config --global user.email "sunilbhor_su1@yahoo.com"
+
+sunil@DESKTOP-PM5QSAH MINGW64 /c/SUNIL/Learning/GIT-GITHUB/GIT-Projects (master)
+$ git config --global user.name "sunilbhor"
+
+sunil@DESKTOP-PM5QSAH MINGW64 /c/SUNIL/Learning/GIT-GITHUB/GIT-Projects (master)
+$ git commit -m "adding first commit to my local repo"
+[master 5911243] adding first commit to my local repo
+ 1 file changed, 1 insertion(+)
+ create mode 100644 file1.txt
+
+sunil@DESKTOP-PM5QSAH MINGW64 /c/SUNIL/Learning/GIT-GITHUB/GIT-Projects (master)
+$ git status
+On branch master
+nothing to commit, working tree clean
+
+sunil@DESKTOP-PM5QSAH MINGW64 /c/SUNIL/Learning/GIT-GITHUB/GIT-Projects (master)
+$ git status
+On branch master
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git checkout -- <file>..." to discard changes in working directory)
+
+        modified:   file1.txt
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+
+        file2.txt
+        file3.txt
+
+no changes added to commit (use "git add" and/or "git commit -a")
+
+sunil@DESKTOP-PM5QSAH MINGW64 /c/SUNIL/Learning/GIT-GITHUB/GIT-Projects (master)
+$ git add -A
+
+sunil@DESKTOP-PM5QSAH MINGW64 /c/SUNIL/Learning/GIT-GITHUB/GIT-Projects (master)
+$ git status
+On branch master
+Changes to be committed:
+  (use "git reset HEAD <file>..." to unstage)
+
+        modified:   file1.txt
+        new file:   file2.txt
+        new file:   file3.txt
+
+
+sunil@DESKTOP-PM5QSAH MINGW64 /c/SUNIL/Learning/GIT-GITHUB/GIT-Projects (master)
+$ git commit -a -m "adding multiple files to my local repo"
+[master 9e87fae] adding multiple files to my local repo
+ 3 files changed, 3 insertions(+), 1 deletion(-)
+ create mode 100644 file2.txt
+ create mode 100644 file3.txt
+
+sunil@DESKTOP-PM5QSAH MINGW64 /c/SUNIL/Learning/GIT-GITHUB/GIT-Projects (master)
+$ git status
+On branch master
+nothing to commit, working tree clean
+
+sunil@DESKTOP-PM5QSAH MINGW64 /c/SUNIL/Learning/GIT-GITHUB/GIT-Projects (master)
+$ git branch firstbranch
+
+sunil@DESKTOP-PM5QSAH MINGW64 /c/SUNIL/Learning/GIT-GITHUB/GIT-Projects (master)
+$ git checkout firstbranch
+Switched to branch 'firstbranch'
+
+sunil@DESKTOP-PM5QSAH MINGW64 /c/SUNIL/Learning/GIT-GITHUB/GIT-Projects (firstbranch)
+$ git status
+On branch firstbranch
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+
+        file4.txt
+
+nothing added to commit but untracked files present (use "git add" to track)
+
+sunil@DESKTOP-PM5QSAH MINGW64 /c/SUNIL/Learning/GIT-GITHUB/GIT-Projects (firstbranch)
+$ git add file4.txt
+
+sunil@DESKTOP-PM5QSAH MINGW64 /c/SUNIL/Learning/GIT-GITHUB/GIT-Projects (firstbranch)
+$ git commit -m "making changes in firstbranch"
+[firstbranch eda9c1c] making changes in firstbranch
+ 1 file changed, 1 insertion(+)
+ create mode 100644 file4.txt
+
+sunil@DESKTOP-PM5QSAH MINGW64 /c/SUNIL/Learning/GIT-GITHUB/GIT-Projects (firstbranch)
+$ git status
+On branch firstbranch
+nothing to commit, working tree clean
+
+sunil@DESKTOP-PM5QSAH MINGW64 /c/SUNIL/Learning/GIT-GITHUB/GIT-Projects (firstbranch)
+$ ls
+file1.txt  file2.txt  file3.txt  file4.txt  README.md
+
+sunil@DESKTOP-PM5QSAH MINGW64 /c/SUNIL/Learning/GIT-GITHUB/GIT-Projects (firstbranch)
+$ git checkout master
+Switched to branch 'master'
+
+sunil@DESKTOP-PM5QSAH MINGW64 /c/SUNIL/Learning/GIT-GITHUB/GIT-Projects (master)
+$ ls
+file1.txt  file2.txt  file3.txt  README.md
+
+sunil@DESKTOP-PM5QSAH MINGW64 /c/SUNIL/Learning/GIT-GITHUB/GIT-Projects (master)
+$ git merge firstbranch
+Updating 9e87fae..eda9c1c
+Fast-forward
+ file4.txt | 1 +
+ 1 file changed, 1 insertion(+)
+ create mode 100644 file4.txt
+
+sunil@DESKTOP-PM5QSAH MINGW64 /c/SUNIL/Learning/GIT-GITHUB/GIT-Projects (master)
+$ ls
+file1.txt  file2.txt  file3.txt  file4.txt  README.md
+
+sunil@DESKTOP-PM5QSAH MINGW64 /c/SUNIL/Learning/GIT-GITHUB/GIT-Projects (master)
+$ ssh-keygen
+Generating public/private rsa key pair.
+Enter file in which to save the key (/c/Users/sunil/.ssh/id_rsa): id_rsa.pub.
+Enter passphrase (empty for no passphrase):
+Enter same passphrase again:
+Your identification has been saved in id_rsa.pub..
+Your public key has been saved in id_rsa.pub..pub.
+The key fingerprint is:
+SHA256:y+mgiXBh6AnzUpTlUzRpVsz8zmm7qk/g145adpS44HU sunil@DESKTOP-PM5QSAH
+The key's randomart image is:
++---[RSA 2048]----+
+|    ..+*.        |
+|   + .+.+        |
+|  o oo   .       |
+| o   .   ...     |
+|+ +   o SoE.     |
+|o=.. o = B=      |
+|ooo   + X.o.     |
+| + . o B +.      |
+|  . o o+=.o.     |
++----[SHA256]-----+
+
+sunil@DESKTOP-PM5QSAH MINGW64 /c/SUNIL/Learning/GIT-GITHUB/GIT-Projects (master)
+$ cat /c/Users/sunil/.ssh/id_rsa.pub
+cat: /c/Users/sunil/.ssh/id_rsa.pub: No such file or directory
+
+sunil@DESKTOP-PM5QSAH MINGW64 /c/SUNIL/Learning/GIT-GITHUB/GIT-Projects (master)
+$ ssh-keygen
+Generating public/private rsa key pair.
+Enter file in which to save the key (/c/Users/sunil/.ssh/id_rsa): id_rsa.pub
+Enter passphrase (empty for no passphrase):
+Enter same passphrase again:
+Your identification has been saved in id_rsa.pub.
+Your public key has been saved in id_rsa.pub.pub.
+The key fingerprint is:
+SHA256:D0cvJ0tVvUzbNGF8hdX7dn4wQCLgdgfot6jERyXLPrM sunil@DESKTOP-PM5QSAH
+The key's randomart image is:
++---[RSA 2048]----+
+|      .o.     o**|
+|     .o o.. ..o+=|
+|     oo+..oo. o.B|
+|     .=..o o.  =.|
+|   . o oS.= o.  .|
+|    o * .= =  o +|
+|   . o +  o    =.|
+|    . E         o|
+|                .|
++----[SHA256]-----+
+
+sunil@DESKTOP-PM5QSAH MINGW64 /c/SUNIL/Learning/GIT-GITHUB/GIT-Projects (master)
+$ ssh-keygen
+Generating public/private rsa key pair.
+Enter file in which to save the key (/c/Users/sunil/.ssh/id_rsa):
+Created directory '/c/Users/sunil/.ssh'.
+Enter passphrase (empty for no passphrase):
+Enter same passphrase again:
+Your identification has been saved in /c/Users/sunil/.ssh/id_rsa.
+Your public key has been saved in /c/Users/sunil/.ssh/id_rsa.pub.
+The key fingerprint is:
+SHA256:f6M7ODTV2eB1Su2jj98Y3Hsh7sRQuhjGwLkTbN01dAw sunil@DESKTOP-PM5QSAH
+The key's randomart image is:
++---[RSA 2048]----+
+|            .Eoo |
+|      o o . o =.o|
+|       B . + B + |
+|      . = . * o..|
+|       oS= o  . .|
+|        =.o ++ o |
+|       . +..+o* o|
+|        o .o.+ ++|
+|         .oo..ooo|
++----[SHA256]-----+
+
+sunil@DESKTOP-PM5QSAH MINGW64 /c/SUNIL/Learning/GIT-GITHUB/GIT-Projects (master)
+$ cat /c/Users/sunil/.ssh/id_rsa.pub
+ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQDQECdDVt2zsFKC5JI2NQkS5ixgMx9B+4PWCavg52Nne7lcxdAwL8dgcKg7ORp7tFocc+CcAy1d+xaTUBo/w77hOoflDr2LBN7d+ls8vHe2+k7UWCqChvvSqukLzmxsmCNkrk9M7eNa2RA+GSooOYR9JQpO88GtyxFkb+cFUrVZLdvoX1j2AmRpjgAiLy82AF8k1T5HtddFKWW45QF1998+YDXi+0Z4u9b1JAQKAxUDBr7Ad1pyoMHQmRDrlK8vTf2sS0ltdSm7HxT4g5P24f0azgOnXqQcDaa//t/aiKdl5GVbCJG0XTUksFgf4sSQHxN3n1ltQKe098uNFLWWK1RT sunil@DESKTOP-PM5QSAH
+
+sunil@DESKTOP-PM5QSAH MINGW64 /c/SUNIL/Learning/GIT-GITHUB/GIT-Projects (master)
+$ ssh -T git@github.com
+The authenticity of host 'github.com (192.30.253.112)' can't be established.
+RSA key fingerprint is SHA256:nThbg6kXUpJWGl7E1IGOCspRomTxdCARLviKw6E5SY8.
+Are you sure you want to continue connecting (yes/no)? yes
+Warning: Permanently added 'github.com,192.30.253.112' (RSA) to the list of known hosts.
+Hi sunilbhor! You've successfully authenticated, but GitHub does not provide shell access.
+
+sunil@DESKTOP-PM5QSAH MINGW64 /c/SUNIL/Learning/GIT-GITHUB/GIT-Projects (master)
+$ git checkout firstbranch
+Switched to branch 'firstbranch'
+
+sunil@DESKTOP-PM5QSAH MINGW64 /c/SUNIL/Learning/GIT-GITHUB/GIT-Projects (firstbranch)
+$ git push origin firstbranch
+
+
+***************************************** 10/25/2018 **********************************************************************
+
+
+sunil@DESKTOP-PM5QSAH MINGW64 /c/SUNIL/Learning/GIT-GITHUB/GIT-Projects (firstbr                                                                                                                anch)
+$ git checkout master
+Switched to branch 'master'
+
+sunil@DESKTOP-PM5QSAH MINGW64 /c/SUNIL/Learning/GIT-GITHUB/GIT-Projects (master)
+$ ls
+file1.txt  file2.txt  file3.txt  file4.txt  id_rsa.pub  id_rsa.pub.  id_rsa.pub..pub  id_rsa.pub.pub  README.md
+
+sunil@DESKTOP-PM5QSAH MINGW64 /c/SUNIL/Learning/GIT-GITHUB/GIT-Projects (master)
+$ git status
+On branch master
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+
+        id_rsa.pub
+        id_rsa.pub.
+        id_rsa.pub..pub
+        id_rsa.pub.pub
+
+nothing added to commit but untracked files present (use "git add" to track)
+
+sunil@DESKTOP-PM5QSAH MINGW64 /c/SUNIL/Learning/GIT-GITHUB/GIT-Projects (master)
+$ git checkout firstbranch
+Switched to branch 'firstbranch'
+
+sunil@DESKTOP-PM5QSAH MINGW64 /c/SUNIL/Learning/GIT-GITHUB/GIT-Projects (firstbranch)
+$ ls
+file1.txt  file2.txt  file3.txt  file4.txt  id_rsa.pub  id_rsa.pub.  id_rsa.pub..pub  id_rsa.pub.pub  README.md
+
+sunil@DESKTOP-PM5QSAH MINGW64 /c/SUNIL/Learning/GIT-GITHUB/GIT-Projects (firstbranch)
+$ git push origin firstbranch
+Enumerating objects: 12, done.
+Counting objects: 100% (12/12), done.
+Delta compression using up to 4 threads.
+Compressing objects: 100% (6/6), done.
+Writing objects: 100% (11/11), 925 bytes | 46.00 KiB/s, done.
+Total 11 (delta 1), reused 0 (delta 0)
+remote: Resolving deltas: 100% (1/1), done.
+remote:
+remote: Create a pull request for 'firstbranch' on GitHub by visiting:
+remote:      https://github.com/sunilbhor/git-github/pull/new/firstbranch
+remote:
+To https://github.com/sunilbhor/git-github.git
+ * [new branch]      firstbranch -> firstbranch
+
+sunil@DESKTOP-PM5QSAH MINGW64 /c/SUNIL/Learning/GIT-GITHUB/GIT-Projects (firstbranch)
+$ git -version
+unknown option: -version
+usage: git [--version] [--help] [-C <path>] [-c <name>=<value>]
+           [--exec-path[=<path>]] [--html-path] [--man-path] [--info-path]
+           [-p | --paginate | -P | --no-pager] [--no-replace-objects] [--bare]
+           [--git-dir=<path>] [--work-tree=<path>] [--namespace=<name>]
+           <command> [<args>]
+
+sunil@DESKTOP-PM5QSAH MINGW64 /c/SUNIL/Learning/GIT-GITHUB/GIT-Projects (firstbranch)
+$ git --version
+git version 2.18.0.windows.1
+
+sunil@DESKTOP-PM5QSAH MINGW64 /c/SUNIL/Learning/GIT-GITHUB/GIT-Projects (firstbranch)
+$
+
+
+*****************************************************************  06/01/2021 *************************************************************************************************************
+https://www.youtube.com/watch?v=FyAAIHHClqI
+file:///C:/Program%20Files/Git/ReleaseNotes.html
+LENOVO@LAPTOP-STBUPON9 MINGW64 ~
+
+MINGW64:/c/Users/LENOVO
+
+C:\Users\LENOVO>git init
+Initialized empty Git repository in C:/Users/LENOVO/.git/
+
+PS D:\SUNIl\Learning\GIT-GITHUB\GIT-Projects> echo "#Demo" >> README1.md
+PS D:\SUNIl\Learning\GIT-GITHUB\GIT-Projects> dir
+
+
+    Directory: D:\SUNIl\Learning\GIT-GITHUB\GIT-Projects
+
+
+Mode                LastWriteTime         Length Name
+----                -------------         ------ ----
+-a----       24-10-2018     22:55             36 file1.txt
+-a----       24-10-2018     22:55             11 file2.txt
+-a----       24-10-2018     22:55             10 file3.txt
+-a----       24-10-2018     23:10             10 file4.txt
+-a----       24-10-2018     23:33           1679 id_rsa.pub
+-a----       24-10-2018     23:29            403 id_rsa.pub..pub
+-a----       24-10-2018     23:33            403 id_rsa.pub.pub
+-a----       24-10-2018     22:34             56 README.md
+-a----       07-01-2021     20:33             16 README1.md
+
+
+PS D:\SUNIl\Learning\GIT-GITHUB\GIT-Projects> cat .\README1.md
+#Demo
+PS D:\SUNIl\Learning\GIT-GITHUB\GIT-Projects> git add README1.md
+PS D:\SUNIl\Learning\GIT-GITHUB\GIT-Projects> git commit -m "first commit"
+[master c09c39a] first commit
+ 4 files changed, 29 insertions(+)
+ create mode 100644 README1.md
+ create mode 100644 id_rsa.pub
+ create mode 100644 id_rsa.pub..pub
+ create mode 100644 id_rsa.pub.pub
+PS D:\SUNIl\Learning\GIT-GITHUB\GIT-Projects> git remote add origin "https://github.com/sunilbhor/git-github.git"
+error: remote origin already exists.
+PS D:\SUNIl\Learning\GIT-GITHUB\GIT-Projects> git push -u origin master
+info: please complete authentication in your browser...
+Enumerating objects: 7, done.
+Counting objects: 100% (7/7), done.
+Delta compression using up to 8 threads
+Compressing objects: 100% (5/5), done.
+Writing objects: 100% (6/6), 2.41 KiB | 494.00 KiB/s, done.
+Total 6 (delta 0), reused 0 (delta 0), pack-reused 0
+To https://github.com/sunilbhor/git-github.git
+   def2b68..c09c39a  master -> master
+Branch 'master' set up to track remote branch 'master' from 'origin'.
+PS D:\SUNIl\Learning\GIT-GITHUB\GIT-Projects>
+PS D:\SUNIl\Learning\GIT-GITHUB\GIT-Projects> git add .
+PS D:\SUNIl\Learning\GIT-GITHUB\GIT-Projects> git commit -m "today's changes"
+[master e8e91ca] today's changes
+ 3 files changed, 29 deletions(-)
+ delete mode 100644 id_rsa.pub
+ delete mode 100644 id_rsa.pub..pub
+ delete mode 100644 id_rsa.pub.pub
+PS D:\SUNIl\Learning\GIT-GITHUB\GIT-Projects> git push -u origin master
+Enumerating objects: 3, done.
+Counting objects: 100% (3/3), done.
+Delta compression using up to 8 threads
+Compressing objects: 100% (2/2), done.
+Writing objects: 100% (2/2), 223 bytes | 223.00 KiB/s, done.
+Total 2 (delta 1), reused 0 (delta 0), pack-reused 0
+remote: Resolving deltas: 100% (1/1), completed with 1 local object.
+To https://github.com/sunilbhor/git-github.git
+   c09c39a..e8e91ca  master -> master
+Branch 'master' set up to track remote branch 'master' from 'origin'.
+PS D:\SUNIl\Learning\GIT-GITHUB\GIT-Projects>
+
+
+Useful Video Links:- 
+https://www.udemy.com/course/git-step-by-step-guide/
+
+********************************************************** 07/06/2021 ***************************************************************************************************************
+
+https://git-scm.com/downloads
+
+$ git config --global --list
+user.email=sunilbhor_su1@yahoo.com
+user.name=sunilbhor
+
+$ pwd
+/c/Users/LENOVO
+
+LENOVO@LAPTOP-STBUPON9 MINGW64 ~ (master)
+$ git --version
+git version 2.31.1.windows.1
+
+$ vi ~/.gitconfig
+
+Link to download the dummy projects:-
+www.initializr.com
+
+LENOVO@LAPTOP-STBUPON9 MINGW64 ~/Downloads (master)
+$ cp initializr-verekia-4.0.zip /d/SUNIL/Learning/GIT-GITHUB/GIT-Projects/
+
+
+Git Command Summary resource (setting up a Git Repository)
+Configuring author and email
+
+# home directory
+$ pwd                                                            
+$ mkdir git-fast            
+$ cd git-fast
+$ pwd    
+$ git config --global --list     
+$ git config --global user.name "Bibhash Roy"
+$ git config --global --list
+$ git config --global user.email "bibhash@whitepeaksoft.com"
+$ git config --global --list
+
+# vi is the editor, ~ is the home directory
+$ vi ~/.gitconfig                                                
+$ cat .gitconfig
+
+
+
+
+
+Initializing an empty repository
+
+$ pwd
+$ mkdir myRepoFromScratch
+$ cd myRepoFromScratch
+$ pwd         
+   
+# notice the creation of .git directory                        
+$ git init   
+                       
+# "ls -al" command lists all objects, including hidden                                             
+$ ls -al  
+      
+# without using any editor                                                                 
+$ echo "this is my first file in empty repository" >> firstFileUsingEcho.txt     
+$ ls
+$ cat firstFileUsingEcho.txt
+
+ # create the file and enter some contents
+$ vi  secondFileUsingVI.txt                                        
+$ ls
+$ cat secondFileUsingVI.txt
+
+
+
+
+
+Existing unversioned project to repository
+
+$ pwd
+
+ # copy the downloaded file
+$ cp /f/Bibhash/Downloads/initializr-verekia-4.0.zip .
+
+# unzipping will create a folder called "initilizr"     
+$ unzip initializr-verekia-4.0.zip                                        
+$ ls -al
+
+# remove copied file
+$ rm initializr-verekia-4.0.zip  
+
+# rename directory                                          
+$ mv initializr/ myRepoFromExistingSource    
+              
+# now we need to add source control to the unversioned repo "myRepoFromExistingSource"
+$ cd myRepoFromExistingSource  
+         
+# Initialized existing source                        
+$ git init            
+
+# .git folder can be seen with ls -al                                                               
+$ ls -al          
+
+                                                               
+
+Command Summary - configuration & repository creation
+# Typically, you’ll want to use the --global flag to set configuration options for the current user.
+# Define the author name to be used for all commits by the current user.
+$ git config --global user.name <name>    
+
+# Define the author email to be used for all commits by the current user.
+$ git config --global user.email <email>   
+
+# For listing all the global configuration at user level
+$ git config --global --list          
+   
+# Transforms the current directory into a Git repository; the command is same for creating repo from ..contd..
+# scratch or convert an existing unversioned code base to a git repository             
+$ git init                                                    
+
+Command Summary - Accessing Git Help system
+
+# general help
+$ git help
+
+# lists sub-commands
+$ git help -a
+
+# lists concept guides
+$ git help -g
+
+# read about a specific sub-command
+$ git help <command>
+
+# read about a specific concept
+$ git help <concept>
+
+
+
+https://github.com/githubtraining/hellogitworld
+
+https://github.com/githubtraining/hellogitworld.git
+
+Copying a GitHub repository
+
+$ cd <project_directory>
+$ cd /d/SUNIL/Learning/GIT-GITHUB/GIT-Projects
+$ git clone https://github.com/<user>/<example_project>
+$ git clone https://github.com/githubtraining/hellogitworld.git
+$ cd example_project
+$ cd hellogitworld
+$ ls -al
+
+Adding your changes
+
+# home directory
+$ pwd                          
+$ cd git-fast
+$ ls
+$ cd myRepoFromScratch
+$ ls
+
+# create a file and add some content
+$ vi demoFile1                    
+$ cat demoFile1
+$ git status
+$ git add demoFile1
+$ git rm --cached demoFile1
+$ git status
+
+
+
+Committing changes
+
+ # home directory
+$ pwd                              
+$ git status
+$ git add demofile1
+$ git status
+$ git commit -m "our first commit in this course"
+$ git status
+
+
+
+Command Summary - add and commit
+
+$ git add
+$ git commit -m "message goes here"
+
+How to check your repo status
+
+# cd to /c/Users/HP-PC/git-fast/myRepoFromScratch
+$ pwd
+$ ls
+
+# start with a clean working directory
+$ git status                
+
+# create file and add some contents such as "I want to shed 15 kg 5 weeks"        
+$ vi weightLossChart    
+
+# create file and add some contents such as "I want to add more green vegetables to my diet"    
+$ vi dietChart                  
+$ git status           
+
+ # same as "git status" since "long" option is the default one (compare output)    
+$ git status --long        
+$ git status -s                                 # status "??" for untracked file
+$ git add weightLossChart
+$ git status -s                                 # status "A"
+$ git commit -m "1st commit for weightLossChart"
+$ git status -s     
+$ vi weightLossChart                 # make some changes to the file
+$ git status -s                              # status "M"
+$ git add weightLossChart  
+$ git status -s                                # status "M"
+$ git commit -m "2nd commit for weightLossChart"
+$ git status -s   
+$ mv weightLossChart weightLossChart2
+$ git status -s                             # status "D"
+
+
+
+How to check commit history
+
+# displays the entire commit history using the default formatting
+$ git log                
+
+# oneline condensed view of each commit history                      
+$ git log --oneline
+
+# Only display commits that include the specified file                             
+$ git log <file>          
+
+# Show only commits that occur between <since> and <until>. Both arguments can be either a commit ID ...contd.
+# a branch, name, HEAD, or any other kind of revision reference.                    
+$ git log <since>..<until>                     
+
+# Limit the number of commits by <limit>. For example, git log -n 3 will display only 3 commits.  
+$ git log -n <limit>                          
+
+
+
+Command Summary - status & log
+
+# provides a status report of the repo
+$ git status             
+
+# displays the entire commit history using the default formatting                       
+$ git log                
+
+ # oneline condensed view of each commit history                      
+$ git log --oneline           
+
+# Only display commits that include the specified file                 
+$ git log <file>     
+
+# Show only commits that occur between <since> and <until>. Both arguments can be either a commit ID, a branch
+# name, HEAD, or any other kind of revision reference.                        
+$ git log <since>..<until>                    
+
+# Limit the number of commits by <limit>. For example, git log -n 3 will display only 3 commits.
+$ git log -n <limit>    
+
+Section 9: Pushing in GitHub 
+
+
+https://github.com/sunilbhor/git-github.git
+
+LENOVO@LAPTOP-STBUPON9 MINGW64 /d/SUNIL/Learning/GIT-GITHUB/git-fast (master)
+$ git clone https://github.com/sunilbhor/git-github.git
+
+LENOVO@LAPTOP-STBUPON9 MINGW64 /d/SUNIL/Learning/GIT-GITHUB/git-fast/git-github (master)
+$ git status
+$ git add file4.txt
+$ git commit -m "this is changes for demonstrate push command"
+$ git push origin master
+
+LENOVO@LAPTOP-STBUPON9 MINGW64 /d/SUNIL/Learning/GIT-GITHUB/git-fast/git-github (master)
+$ git --version
+git version 2.32.0.windows.2
+
+https://git-scm.com/
+
+LENOVO@LAPTOP-STBUPON9 MINGW64 /d/SUNIL/Learning/GIT-GITHUB/git-fast
+$ mkdir main-demo-repo-2
+$ cd main-demo-repo-2
+$ git init
+Initialized empty Git repository in D:/SUNIL/Learning/GIT-GITHUB/git-fast/main-demo-repo-2/.git/
+$ echo "main demo" >> main-demo-file-1
+$ git add .
+$ git commit -m "initial commit"
+
+$ git remote add origin git@github.com:sunilbhor/main-demo-repo-2.git
+$ git remote
+origin
+
+LENOVO@LAPTOP-STBUPON9 MINGW64 /d/SUNIL/Learning/GIT-GITHUB/git-fast/main-demo-repo-2 (main)
+$ git push -u origin main
+The authenticity of host 'github.com (13.234.210.38)' can't be established.
+RSA key fingerprint is SHA256:nThbg6kXUpJWGl7E1IGOCspRomTxdCARLviKw6E5SY8.
+This key is not known by any other names
+Are you sure you want to continue connecting (yes/no/[fingerprint])? yes
+Warning: Permanently added 'github.com' (RSA) to the list of known hosts.
+git@github.com: Permission denied (publickey).
+fatal: Could not read from remote repository.
+
+Please make sure you have the correct access rights
+and the repository exists.
+
+
+
+ssh-keygen -o -t rsa -C "sunilbhor_su1@yahoo.com"
+
+LENOVO@LAPTOP-STBUPON9 MINGW64 ~/.ssh (master)
+$ ssh-keygen -o -t rsa -C "sunilbhor_su1@yahoo.com"
+Generating public/private rsa key pair.
+Enter file in which to save the key (/c/Users/LENOVO/.ssh/id_rsa):
+Enter passphrase (empty for no passphrase):
+Enter same passphrase again:
+Your identification has been saved in /c/Users/LENOVO/.ssh/id_rsa
+Your public key has been saved in /c/Users/LENOVO/.ssh/id_rsa.pub
+The key fingerprint is:
+SHA256:wdqlJigaiSNY9U2Kwk87AfZvjr3JVpt/d5pFfh8yceQ sunilbhor_su1@yahoo.com
+The key's randomart image is:
++---[RSA 3072]----+
+|  o .   .        |
+| o + o =         |
+|  + = o + .    . |
+|oo + = o +    o  |
+|B . = = S    . E.|
+|.+ . * o.     oo |
+|.   . o. o   o .+|
+|     ..oo   . +o=|
+|     .+  ... .oo.|
++----[SHA256]-----+
+
+LENOVO@LAPTOP-STBUPON9 MINGW64 ~/.ssh (master)
+$ ls -ltrh
+total 6.0K
+-rw-r--r-- 1 LENOVO 197121  392 Aug  5 22:08 known_hosts
+-rw-r--r-- 1 LENOVO 197121 2.6K Aug  6 21:57 id_rsa
+-rw-r--r-- 1 LENOVO 197121  577 Aug  6 21:57 id_rsa.pub
+
+LENOVO@LAPTOP-STBUPON9 MINGW64 ~/.ssh (master)
+$ cat ~/.ssh/id_rsa.pub
+ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABgQDWo6TV+QjESUNX62ZbLeP7bgSsavufU7jMaStYY5+VD9OTUCe7MhlCojhJPM9MgYarsbkZqQpbPomOZc1EWAVxUXniwlVk5b1mTPVsAXWKNtHYezoh6/NTVxiPc2da/gS6fs9p7NcFv8RdLqoDAPGE67hBU+C7EXClGg1fFpa3RiBuznx+TsKCuc5S4KhUJT2Wz7nzvLDMVNAOIkL9jRkEtbcojOhYqGanzCWNKJemuvlhskGLxt8vwkSRoe/NzCLzbKGpkx7gNcUBVfs86BaTXdVZ8QT3tYMuvFaxjE+da6vw+qCvlB5YzoW+Q6ro1ELGX+VcEyBJ37MWp4izFCWVRTHRB8MZPPUg9PIQTa9nbMsK7o64Qaeq1vqJQmlQhuJTbWBIXVV9jAQG8QThbyH6J7uilGACULRz3pvICD3L52McCjBc40EAXuzdLHqdUd1AkHVV4x8rUpCxTfrO9xzOebkg6Ccp4ihYzPZJs55w5HdttQ5HsKg+rwLDI9Z5jZ8= sunilbhor_su1@yahoo.com
+
+LENOVO@LAPTOP-STBUPON9 MINGW64 ~/.ssh (master)
+$ cd /d/SUNIL/Learning/GIT-GITHUB/git-fast/main-demo-repo-2
+
+LENOVO@LAPTOP-STBUPON9 MINGW64 /d/SUNIL/Learning/GIT-GITHUB/git-fast/main-demo-repo-2 (main)
+$ ls -ltrh
+total 1.0K
+-rw-r--r-- 1 LENOVO 197121 10 Aug  5 21:56 main-demo-file-1
+
+git branch
+git branch -M main
+
+LENOVO@LAPTOP-STBUPON9 MINGW64 /d/SUNIL/Learning/GIT-GITHUB/git-fast/main-demo-repo-2 (main)
+$ git push -u origin main
+Enumerating objects: 3, done.
+Counting objects: 100% (3/3), done.
+Writing objects: 100% (3/3), 229 bytes | 114.00 KiB/s, done.
+Total 3 (delta 0), reused 0 (delta 0), pack-reused 0
+To github.com:sunilbhor/main-demo-repo-2.git
+ * [new branch]      main -> main
+Branch 'main' set up to track remote branch 'main' from 'origin'.
+
+LENOVO@LAPTOP-STBUPON9 MINGW64 /d/SUNIL/Learning/GIT-GITHUB/git-fast/main-demo-repo-2 (main)
+
+Command Summary (GitHub via SSH)
+Checking existing SSH Keys
+
+$ ls -al ~/.ssh         # Lists the files in your .ssh directory, if they exist
+
+
+
+Generate an SSH Key
+
+# Generates public/private rsa key pair with default values - DON'T RUN THIS ONE
+$ ssh-keygen           
+
+ # 't' for type of key, 'b' for length of key, 'C' for comment for maintaining multiple keys                                
+$ ssh-keygen -t rsa -b 2048 - C "home machine"
+
+
+        
+Enable SSH Agent & add the SSH Key to the agent
+
+# start the ssh-agent in the background
+$ eval "$(ssh-agent -s)"        
+
+# Add your SSH key to the ssh-agent    
+$ ssh-add ~/.ssh/id_rsa.pub           
+
+
+
+Testing SSH connection
+
+# Verify SSH connection; here 'git" is the user name; note that you cannot use your github user name such as 'william'
+$ ssh -T git@github.com                 
+
+# another alternative way to verify if firewall issues are present
+$ ssh -T -p 443 git@github.com          
+
+
+
+Remote URL switching and SSH push
+
+# List your existing remotes in order to get the name of the remote you want to change
+$ git remote -v      
+
+ # set remote URL
+$ git remote set-url origin git@github.com:sunilbhor/main-demo-repo-2.git       
+
+ # Verify new remote URL  
+$ git remote -v                          
+
+$ git remote set-url origin https://github.com/sunilbhor/main-demo-repo-2.git       
+
+URL HPPS: https://github.com/sunilbhor/main-demo-repo-2.git
+URL SSH: git@github.com:sunilbhor/main-demo-repo-2.git
+
+Changing passphrase
+
+# for changing password occasionally
+$ ssh-keygen -p          
+
+LENOVO@LAPTOP-STBUPON9 MINGW64 /d/SUNIL/Learning/GIT-GITHUB/git-fast/main-demo-repo-2 (main)
+$ git remote -v
+origin  git@github.com:sunilbhor/main-demo-repo-2.git (fetch)
+origin  git@github.com:sunilbhor/main-demo-repo-2.git (push)
+
+LENOVO@LAPTOP-STBUPON9 MINGW64 /d/SUNIL/Learning/GIT-GITHUB/git-fast/main-demo-repo-2 (main)
+$ git remote -v
+origin  git@github.com:sunilbhor/main-demo-repo-2.git (fetch)
+origin  git@github.com:sunilbhor/main-demo-repo-2.git (push)
+
+LENOVO@LAPTOP-STBUPON9 MINGW64 /d/SUNIL/Learning/GIT-GITHUB/git-fast/main-demo-repo-2
+$ git remote set-url origin https://github.com/sunilbhor/main-demo-repo-2.git
+
+LENOVO@LAPTOP-STBUPON9 MINGW64 /d/SUNIL/Learning/GIT-GITHUB/git-fast/main-demo-repo-2 (main)
+$ git remote -v
+origin  https://github.com/sunilbhor/main-demo-repo-2.git (fetch)
+origin  https://github.com/sunilbhor/main-demo-repo-2.git (push)
+
+LENOVO@LAPTOP-STBUPON9 MINGW64 /d/SUNIL/Learning/GIT-GITHUB/git-fast/main-demo-repo-2 (main)
+$ git remote set-url origin git@github.com:sunilbhor/main-demo-repo-2.git
+
+LENOVO@LAPTOP-STBUPON9 MINGW64 /d/SUNIL/Learning/GIT-GITHUB/git-fast/main-demo-repo-2 (main)
+$ git remote -v
+origin  git@github.com:sunilbhor/main-demo-repo-2.git (fetch)
+origin  git@github.com:sunilbhor/main-demo-repo-2.git (push)
+
+LENOVO@LAPTOP-STBUPON9 MINGW64 /d/SUNIL/Learning/GIT-GITHUB/git-fast/main-demo-repo-2 (main)
+
+
+cd /c/Program\ Files\ \(x86\)/Sublime\ Text\ 3/subl.exe
+
+'c:/program files (x86)/sublime text 3/subl.exe'
+
+cd /d/SUNIL/Learning/GIT-GITHUB/git-fast
+
+https://www.perforce.com
+
+LENOVO@LAPTOP-STBUPON9 MINGW64 /d/SUNIL/Learning/GIT-GITHUB (master)
+$ git config --global diff.tool p4merge
+
+LENOVO@LAPTOP-STBUPON9 MINGW64 /d/SUNIL/Learning/GIT-GITHUB (master)
+$ git config --global difftool.p4merge.path "C:/Program Files/Perforce/p4merge.exe"
+
+LENOVO@LAPTOP-STBUPON9 MINGW64 /d/SUNIL/Learning/GIT-GITHUB (master)
+$ git config --global difftool.prompt false
+
+LENOVO@LAPTOP-STBUPON9 MINGW64 /d/SUNIL/Learning/GIT-GITHUB (master)
+$ git config --global merge.tool p4merge
+
+LENOVO@LAPTOP-STBUPON9 MINGW64 /d/SUNIL/Learning/GIT-GITHUB (master)
+$ git config --global mergetool.p4merge.path "C:/Program Files/Perforce/p4merge.exe"
+
+LENOVO@LAPTOP-STBUPON9 MINGW64 /d/SUNIL/Learning/GIT-GITHUB (master)
+$ git config --global mergetool.prompt false
+
+LENOVO@LAPTOP-STBUPON9 MINGW64 /d/SUNIL/Learning/GIT-GITHUB (master)
+$ git config --global --list
+user.email=sunilbhor_su1@yahoo.com
+user.name=sunilbhor
+core.editor='c:/program files (x86)/sublime text 3/subl.exe' -w
+diff.tool=p4merge
+difftool.p4merge.path=C:/Program Files/Perforce/p4merge.exe
+difftool.prompt=false
+merge.tool=p4merge
+mergetool.p4merge.path=C:/Program Files/Perforce/p4merge.exe
+mergetool.prompt=false
+
+Command Summary (Git commands deep dive)
+"git log" in-depth
+
+# "--decorate" provides branch name details 
+# "--graph" provides a graphical view of branching activities 
+# "--all" provides information about all branches irrespective of the current branch 
+git log --oneline --decorate --graph git log --oneline --decorate --graph --all 
+ 
+# "-stat" option gives information about which files were altered as well as ...(contd). 
+# the number of lines added/deleted from each file 
+git log --oneline --stat git log --oneline --stat --oneline -n 2
+ 
+# "-p" option provides patch information such as diff 
+git log -p
+ 
+# displays commit history specific to artifacts within a directory only
+git log <directory-name>
+ 
+# "--grep" option allows searching commit history that contain the string "query-string" 
+git log --oneline --grep="query-string"
+
+
+
+LENOVO@LAPTOP-STBUPON9 MINGW64 ~ (master)
+$ cd /d
+
+LENOVO@LAPTOP-STBUPON9 MINGW64 /d
+$ cd SUNIL/Learning/
+
+LENOVO@LAPTOP-STBUPON9 MINGW64 /d/SUNIL/Learning
+$ ls -ltrh
+total 4.9G
+-rw-r--r-- 1 LENOVO 197121 2.9G Nov 14  2011 rhel-5.2-server-i386-dvd.iso
+-rwxr-xr-x 1 LENOVO 197121 212M Jul 31  2018 DockerToolbox.exe*
+-rw-r--r-- 1 LENOVO 197121 1.3G Aug  7  2018 Ubuntu_18.04.1-VM-64bit.7z
+-rwxr-xr-x 1 LENOVO 197121 401M Aug  8  2018 VMware-workstation-full-12.5.5-5234757.exe*
+-rw-r--r-- 1 LENOVO 197121 118M Aug 10  2018 jenkins-2.136.zip
+-rw-r--r-- 1 LENOVO 197121   34 Aug 11  2018 initialAdminPassword
+-rw-r--r-- 1 LENOVO 197121  181 Aug 11  2018 Jenkins_Credentional.txt
+drwxr-xr-x 1 LENOVO 197121    0 Oct 13  2019 DevOps/
+drwxr-xr-x 1 LENOVO 197121    0 Oct 13  2019 DOCKER/
+drwxr-xr-x 1 LENOVO 197121    0 Oct 13  2019 ITIL/
+drwxr-xr-x 1 LENOVO 197121    0 Oct 13  2019 JavaProject1/
+drwxr-xr-x 1 LENOVO 197121    0 Oct 13  2019 RHEL5_ORA10G/
+drwxr-xr-x 1 LENOVO 197121    0 Oct 13  2019 RHEL7.5-x86_64/
+drwxr-xr-x 1 LENOVO 197121    0 Oct 13  2019 VMware_Workstation_6.5.1_Build_126130/
+-rw-r--r-- 1 LENOVO 197121  176 Jan 28  2021 Interview_links.txt
+-rw-r--r-- 1 LENOVO 197121  904 Feb 17  2021 Interview_Questions.txt
+drwxr-xr-x 1 LENOVO 197121    0 Jun  3 20:17 Software/
+drwxr-xr-x 1 LENOVO 197121    0 Jun  4 13:50 Maven_Java/
+drwxr-xr-x 1 LENOVO 197121    0 Jun  4 13:53 Jenkins/
+-rw-r--r-- 1 LENOVO 197121  255 Aug  4 21:31 credentional.txt
+drwxr-xr-x 1 LENOVO 197121    0 Aug  4 21:31 AWS/
+drwxr-xr-x 1 LENOVO 197121    0 Aug 18 15:47 GIT-GITHUB/
+
+LENOVO@LAPTOP-STBUPON9 MINGW64 /d/SUNIL/Learning
+$ cd GIT-GITHUB/
+
+LENOVO@LAPTOP-STBUPON9 MINGW64 /d/SUNIL/Learning/GIT-GITHUB (master)
+$ ls -ltrh
+total 47M
+-rwxr-xr-x 1 LENOVO 197121 47M Jan  6  2021 Git-2.30.0-64-bit.exe*
+drwxr-xr-x 1 LENOVO 197121   0 Aug  5 21:54 git-fast/
+-rw-r--r-- 1 LENOVO 197121 225 Aug  5 23:05 GITHUB-Credentional.txt
+-rw-r--r-- 1 LENOVO 197121 124 Aug 18 15:47 major-milestones
+-rw-r--r-- 1 LENOVO 197121 33K Aug 20 11:24 GIT-Learning.txt
+drwxr-xr-x 1 LENOVO 197121   0 Aug 20 11:44 GIT-Projects/
+
+LENOVO@LAPTOP-STBUPON9 MINGW64 /d/SUNIL/Learning/GIT-GITHUB (master)
+$ cd git-fast/
+
+LENOVO@LAPTOP-STBUPON9 MINGW64 /d/SUNIL/Learning/GIT-GITHUB/git-fast (master)
+$ ls -ltrh
+total 4.0K
+drwxr-xr-x 1 LENOVO 197121 0 Aug  5 21:51 main-demo-repo-1/
+drwxr-xr-x 1 LENOVO 197121 0 Aug  5 21:56 main-demo-repo-2/
+drwxr-xr-x 1 LENOVO 197121 0 Aug 18 15:48 git-github/
+
+LENOVO@LAPTOP-STBUPON9 MINGW64 /d/SUNIL/Learning/GIT-GITHUB/git-fast (master)
+$ git branch -a
+* master
+
+LENOVO@LAPTOP-STBUPON9 MINGW64 /d/SUNIL/Learning/GIT-GITHUB/git-fast (master)
+$ git branch small-feature
+
+LENOVO@LAPTOP-STBUPON9 MINGW64 /d/SUNIL/Learning/GIT-GITHUB/git-fast (master)
+$ git branch
+* master
+  small-feature
+
+LENOVO@LAPTOP-STBUPON9 MINGW64 /d/SUNIL/Learning/GIT-GITHUB/git-fast (master)
+$ git branch -a
+* master
+  small-feature
+
+LENOVO@LAPTOP-STBUPON9 MINGW64 /d/SUNIL/Learning/GIT-GITHUB/git-fast (master)
+$ git branch -m small-feature big-feature
+
+LENOVO@LAPTOP-STBUPON9 MINGW64 /d/SUNIL/Learning/GIT-GITHUB/git-fast (master)
+$ git branch -a
+  big-feature
+* master
+
+LENOVO@LAPTOP-STBUPON9 MINGW64 /d/SUNIL/Learning/GIT-GITHUB/git-fast (master)
+$ git checkout big-feature
+Switched to branch 'big-feature'
+D       Playground/index.html.txt
+
+LENOVO@LAPTOP-STBUPON9 MINGW64 /d/SUNIL/Learning/GIT-GITHUB/git-fast (big-feature)
+$ git branch
+* big-feature
+  master
+
+LENOVO@LAPTOP-STBUPON9 MINGW64 /d/SUNIL/Learning/GIT-GITHUB/git-fast (big-feature)
+$ ls -ltrh
+total 4.0K
+drwxr-xr-x 1 LENOVO 197121 0 Aug  5 21:51 main-demo-repo-1/
+drwxr-xr-x 1 LENOVO 197121 0 Aug  5 21:56 main-demo-repo-2/
+drwxr-xr-x 1 LENOVO 197121 0 Aug 18 15:48 git-github/
+
+LENOVO@LAPTOP-STBUPON9 MINGW64 /d/SUNIL/Learning/GIT-GITHUB/git-fast (big-feature)
+$ cd git-github/
+
+LENOVO@LAPTOP-STBUPON9 MINGW64 /d/SUNIL/Learning/GIT-GITHUB/git-fast/git-github (master)
+$ cd ..
+
+LENOVO@LAPTOP-STBUPON9 MINGW64 /d/SUNIL/Learning/GIT-GITHUB/git-fast (big-feature)
+$ touch newfile
+
+LENOVO@LAPTOP-STBUPON9 MINGW64 /d/SUNIL/Learning/GIT-GITHUB/git-fast (big-feature)
+$ ls -ltrh
+total 4.0K
+drwxr-xr-x 1 LENOVO 197121 0 Aug  5 21:51 main-demo-repo-1/
+drwxr-xr-x 1 LENOVO 197121 0 Aug  5 21:56 main-demo-repo-2/
+drwxr-xr-x 1 LENOVO 197121 0 Aug 18 15:48 git-github/
+-rw-r--r-- 1 LENOVO 197121 0 Aug 23 21:18 newfile
+
+LENOVO@LAPTOP-STBUPON9 MINGW64 /d/SUNIL/Learning/GIT-GITHUB/git-fast (big-feature)
+$ vi newfile
+
+LENOVO@LAPTOP-STBUPON9 MINGW64 /d/SUNIL/Learning/GIT-GITHUB/git-fast (big-feature)
+$ ls -ltrh
+total 5.0K
+drwxr-xr-x 1 LENOVO 197121  0 Aug  5 21:51 main-demo-repo-1/
+drwxr-xr-x 1 LENOVO 197121  0 Aug  5 21:56 main-demo-repo-2/
+drwxr-xr-x 1 LENOVO 197121  0 Aug 18 15:48 git-github/
+-rw-r--r-- 1 LENOVO 197121 12 Aug 23 21:19 newfile
+
+LENOVO@LAPTOP-STBUPON9 MINGW64 /d/SUNIL/Learning/GIT-GITHUB/git-fast (big-feature)
+$ git branch -d big-feature
+error: Cannot delete branch 'big-feature' checked out at 'D:/SUNIL/Learning/GIT-GITHUB'
+
+LENOVO@LAPTOP-STBUPON9 MINGW64 /d/SUNIL/Learning/GIT-GITHUB/git-fast (big-feature)
+$ git checkout master
+Switched to branch 'master'
+D       Playground/index.html.txt
+
+LENOVO@LAPTOP-STBUPON9 MINGW64 /d/SUNIL/Learning/GIT-GITHUB/git-fast (master)
+$ git branch -d big-feature
+Deleted branch big-feature (was 86b9c01).
+
+LENOVO@LAPTOP-STBUPON9 MINGW64 /d/SUNIL/Learning/GIT-GITHUB/git-fast (master)
+$ ls -ltrh
+total 5.0K
+drwxr-xr-x 1 LENOVO 197121  0 Aug  5 21:51 main-demo-repo-1/
+drwxr-xr-x 1 LENOVO 197121  0 Aug  5 21:56 main-demo-repo-2/
+drwxr-xr-x 1 LENOVO 197121  0 Aug 18 15:48 git-github/
+-rw-r--r-- 1 LENOVO 197121 12 Aug 23 21:19 newfile
+
+LENOVO@LAPTOP-STBUPON9 MINGW64 /d/SUNIL/Learning/GIT-GITHUB/git-fast (master)
+$ cd git-github/
+
+LENOVO@LAPTOP-STBUPON9 MINGW64 /d/SUNIL/Learning/GIT-GITHUB/git-fast/git-github (master)
+$ ls -ltrh
+total 7.0K
+-rw-r--r-- 1 LENOVO 197121  56 Aug  5 21:04 README.md
+-rw-r--r-- 1 LENOVO 197121   0 Aug  5 21:04 README2.md
+-rw-r--r-- 1 LENOVO 197121  16 Aug  5 21:04 README1.md
+-rw-r--r-- 1 LENOVO 197121  11 Aug  5 21:04 file2.txt
+-rw-r--r-- 1 LENOVO 197121  36 Aug  5 21:04 file1.txt
+-rw-r--r-- 1 LENOVO 197121  10 Aug  5 21:04 file3.txt
+-rw-r--r-- 1 LENOVO 197121 128 Aug 18 13:21 major-milestones
+-rw-r--r-- 1 LENOVO 197121 225 Aug 18 15:48 file4.txt
+
+LENOVO@LAPTOP-STBUPON9 MINGW64 /d/SUNIL/Learning/GIT-GITHUB/git-fast/git-github (master)
+$ cd ..
+
+LENOVO@LAPTOP-STBUPON9 MINGW64 /d/SUNIL/Learning/GIT-GITHUB/git-fast (master)
+$ cd ..
+
+LENOVO@LAPTOP-STBUPON9 MINGW64 /d/SUNIL/Learning/GIT-GITHUB (master)
+$ ls -ltrh
+total 47M
+-rwxr-xr-x 1 LENOVO 197121 47M Jan  6  2021 Git-2.30.0-64-bit.exe*
+-rw-r--r-- 1 LENOVO 197121 225 Aug  5 23:05 GITHUB-Credentional.txt
+-rw-r--r-- 1 LENOVO 197121 124 Aug 18 15:47 major-milestones
+-rw-r--r-- 1 LENOVO 197121 33K Aug 20 11:24 GIT-Learning.txt
+drwxr-xr-x 1 LENOVO 197121   0 Aug 20 11:44 GIT-Projects/
+drwxr-xr-x 1 LENOVO 197121   0 Aug 23 21:19 git-fast/
+
+LENOVO@LAPTOP-STBUPON9 MINGW64 /d/SUNIL/Learning/GIT-GITHUB (master)
+$ mkdir demo-branching
+
+LENOVO@LAPTOP-STBUPON9 MINGW64 /d/SUNIL/Learning/GIT-GITHUB (master)
+$ ls -ltrh
+total 47M
+-rwxr-xr-x 1 LENOVO 197121 47M Jan  6  2021 Git-2.30.0-64-bit.exe*
+-rw-r--r-- 1 LENOVO 197121 225 Aug  5 23:05 GITHUB-Credentional.txt
+-rw-r--r-- 1 LENOVO 197121 124 Aug 18 15:47 major-milestones
+-rw-r--r-- 1 LENOVO 197121 33K Aug 20 11:24 GIT-Learning.txt
+drwxr-xr-x 1 LENOVO 197121   0 Aug 20 11:44 GIT-Projects/
+drwxr-xr-x 1 LENOVO 197121   0 Aug 23 21:19 git-fast/
+drwxr-xr-x 1 LENOVO 197121   0 Aug 23 23:19 demo-branching/
+
+LENOVO@LAPTOP-STBUPON9 MINGW64 /d/SUNIL/Learning/GIT-GITHUB (master)
+$ cd demo-branching/
+
+LENOVO@LAPTOP-STBUPON9 MINGW64 /d/SUNIL/Learning/GIT-GITHUB/demo-branching (master)
+$ ls -ltrh
+total 0
+
+LENOVO@LAPTOP-STBUPON9 MINGW64 /d/SUNIL/Learning/GIT-GITHUB/demo-branching (master)
+$ ls
+
+LENOVO@LAPTOP-STBUPON9 MINGW64 /d/SUNIL/Learning/GIT-GITHUB/demo-branching (master)
+$ vim humans.txt
+
+LENOVO@LAPTOP-STBUPON9 MINGW64 /d/SUNIL/Learning/GIT-GITHUB/demo-branching (master)
+$ ls
+humans.txt
+
+LENOVO@LAPTOP-STBUPON9 MINGW64 /d/SUNIL/Learning/GIT-GITHUB/demo-branching (master)
+$ ls -ltrh
+total 1.0K
+-rw-r--r-- 1 LENOVO 197121 85 Aug 23 23:23 humans.txt
+
+LENOVO@LAPTOP-STBUPON9 MINGW64 /d/SUNIL/Learning/GIT-GITHUB/demo-branching (master)
+$ git commit -am "good humans"
+[master e1285f8] good humans
+ 1 file changed, 8 deletions(-)
+ delete mode 100644 Playground/index.html.txt
+
+LENOVO@LAPTOP-STBUPON9 MINGW64 /d/SUNIL/Learning/GIT-GITHUB/demo-branching (master)
+$ vi robots.txt
+
+LENOVO@LAPTOP-STBUPON9 MINGW64 /d/SUNIL/Learning/GIT-GITHUB/demo-branching (master)
+$ ls -ltrh robots.txt
+-rw-r--r-- 1 LENOVO 197121 138 Aug 23 23:28 robots.txt
+
+LENOVO@LAPTOP-STBUPON9 MINGW64 /d/SUNIL/Learning/GIT-GITHUB/demo-branching (master)
+$ git commit -am "robots changing life"
+On branch master
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        ../GIT-Learning.txt
+        ../GIT-Projects/
+        ../GITHUB-Credentional.txt
+        ../Git-2.30.0-64-bit.exe
+        ./
+        ../git-fast/
+        ../major-milestones
+
+nothing added to commit but untracked files present (use "git add" to track)
+
+LENOVO@LAPTOP-STBUPON9 MINGW64 /d/SUNIL/Learning/GIT-GITHUB/demo-branching (master)
+$ git add .
+warning: LF will be replaced by CRLF in demo-branching/humans.txt.
+The file will have its original line endings in your working directory
+warning: LF will be replaced by CRLF in demo-branching/robots.txt.
+The file will have its original line endings in your working directory
+
+LENOVO@LAPTOP-STBUPON9 MINGW64 /d/SUNIL/Learning/GIT-GITHUB/demo-branching (master)
+$ git commit -am "robots changing life"
+[master 4a2a73b] robots changing life
+ 2 files changed, 9 insertions(+)
+ create mode 100644 demo-branching/humans.txt
+ create mode 100644 demo-branching/robots.txt
+
+LENOVO@LAPTOP-STBUPON9 MINGW64 /d/SUNIL/Learning/GIT-GITHUB/demo-branching (master)
+$ git log --oneline
+4a2a73b (HEAD -> master) robots changing life
+e1285f8 good humans
+86b9c01 todays changes in the file
+
+LENOVO@LAPTOP-STBUPON9 MINGW64 /d/SUNIL/Learning/GIT-GITHUB/demo-branching (master)
+$ git checkout -b new-branch-1 master
+Switched to a new branch 'new-branch-1'
+
+LENOVO@LAPTOP-STBUPON9 MINGW64 /d/SUNIL/Learning/GIT-GITHUB/demo-branching (new-branch-1)
+$ git log --oneline
+4a2a73b (HEAD -> new-branch-1, master) robots changing life
+e1285f8 good humans
+86b9c01 todays changes in the file
+
+LENOVO@LAPTOP-STBUPON9 MINGW64 /d/SUNIL/Learning/GIT-GITHUB/demo-branching (new-branch-1)
+$ git checkout master
+Switched to branch 'master'
+
+LENOVO@LAPTOP-STBUPON9 MINGW64 /d/SUNIL/Learning/GIT-GITHUB/demo-branching (master)
+$ ls -ltrh
+total 2.0K
+-rw-r--r-- 1 LENOVO 197121  85 Aug 23 23:23 humans.txt
+-rw-r--r-- 1 LENOVO 197121 138 Aug 23 23:28 robots.txt
+
+LENOVO@LAPTOP-STBUPON9 MINGW64 /d/SUNIL/Learning/GIT-GITHUB/demo-branching (master)
+$ git log --oneline
+4a2a73b (HEAD -> master, new-branch-1) robots changing life
+e1285f8 good humans
+86b9c01 todays changes in the file
+
+LENOVO@LAPTOP-STBUPON9 MINGW64 /d/SUNIL/Learning/GIT-GITHUB/demo-branching (master)
+$ git checkout new-branch-1
+Switched to branch 'new-branch-1'
+
+LENOVO@LAPTOP-STBUPON9 MINGW64 /d/SUNIL/Learning/GIT-GITHUB/demo-branching (new-branch-1)
+$ ls -ltrh
+total 2.0K
+-rw-r--r-- 1 LENOVO 197121  85 Aug 23 23:23 humans.txt
+-rw-r--r-- 1 LENOVO 197121 138 Aug 23 23:28 robots.txt
+
+LENOVO@LAPTOP-STBUPON9 MINGW64 /d/SUNIL/Learning/GIT-GITHUB/demo-branching (new-branch-1)
+$ vi humans.txt
+
+LENOVO@LAPTOP-STBUPON9 MINGW64 /d/SUNIL/Learning/GIT-GITHUB/demo-branching (new-branch-1)
+$ git commit -am "humans for good society"
+warning: LF will be replaced by CRLF in demo-branching/humans.txt.
+The file will have its original line endings in your working directory
+[new-branch-1 6ac2919] humans for good society
+ 1 file changed, 1 insertion(+)
+
+LENOVO@LAPTOP-STBUPON9 MINGW64 /d/SUNIL/Learning/GIT-GITHUB/demo-branching (new-branch-1)
+$ git log --oneline
+6ac2919 (HEAD -> new-branch-1) humans for good society
+4a2a73b (master) robots changing life
+e1285f8 good humans
+86b9c01 todays changes in the file
+
+LENOVO@LAPTOP-STBUPON9 MINGW64 /d/SUNIL/Learning/GIT-GITHUB/demo-branching (new-branch-1)
+$ git checkout master
+Switched to branch 'master'
+
+LENOVO@LAPTOP-STBUPON9 MINGW64 /d/SUNIL/Learning/GIT-GITHUB/demo-branching (master)
+$ git log --oneline
+4a2a73b (HEAD -> master) robots changing life
+e1285f8 good humans
+86b9c01 todays changes in the file
+
+LENOVO@LAPTOP-STBUPON9 MINGW64 /d/SUNIL/Learning/GIT-GITHUB/demo-branching (master)
+$ git checkout -b new-branch-2 new-branch-1
+Switched to a new branch 'new-branch-2'
+
+LENOVO@LAPTOP-STBUPON9 MINGW64 /d/SUNIL/Learning/GIT-GITHUB/demo-branching (new-branch-2)
+$ git log --oneline
+6ac2919 (HEAD -> new-branch-2, new-branch-1) humans for good society
+4a2a73b (master) robots changing life
+e1285f8 good humans
+86b9c01 todays changes in the file
+
+LENOVO@LAPTOP-STBUPON9 MINGW64 /d/SUNIL/Learning/GIT-GITHUB/demo-branching (new-branch-2)
+$ git log --oneline --decorate --graph --all
+* 6ac2919 (HEAD -> new-branch-2, new-branch-1) humans for good society
+* 4a2a73b (master) robots changing life
+* e1285f8 good humans
+* 86b9c01 todays changes in the file
+
+LENOVO@LAPTOP-STBUPON9 MINGW64 /d/SUNIL/Learning/GIT-GITHUB/demo-branching (new-branch-2)
+$ git checkout master
+Switched to branch 'master'
+
+LENOVO@LAPTOP-STBUPON9 MINGW64 /d/SUNIL/Learning/GIT-GITHUB/demo-branching (master)
+$ git log --oneline --decorate --graph --all
+* 6ac2919 (new-branch-2, new-branch-1) humans for good society
+* 4a2a73b (HEAD -> master) robots changing life
+* e1285f8 good humans
+* 86b9c01 todays changes in the file
+
+LENOVO@LAPTOP-STBUPON9 MINGW64 /d/SUNIL/Learning/GIT-GITHUB/demo-branching (master)
+$
+
