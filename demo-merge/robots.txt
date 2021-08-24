@@ -1,5 +1,6 @@
 -- Robots are intelligent machines
 -- Robots can be used to serve the needs of human beings
+-- Today's robots are very much versatile
 # www.robotstxt.org
 
 # Allow crawling of all content
