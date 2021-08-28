@@ -1301,3 +1301,1550 @@ $ git log --oneline --decorate --graph --all
 LENOVO@LAPTOP-STBUPON9 MINGW64 /d/SUNIL/Learning/GIT-GITHUB/demo-branching (master)
 $
 
+******************************************************************** 24-08-2021 ************************************************************************************
+
+
+LENOVO@LAPTOP-STBUPON9 MINGW64 ~ (master)
+$ cd /d
+
+LENOVO@LAPTOP-STBUPON9 MINGW64 /d
+$ cd SUNIL/Learning/GIT-GITHUB/
+
+LENOVO@LAPTOP-STBUPON9 MINGW64 /d/SUNIL/Learning/GIT-GITHUB (master)
+$ ls -ltrh
+total 47M
+-rwxr-xr-x 1 LENOVO 197121 47M Jan  6  2021 Git-2.30.0-64-bit.exe*
+-rw-r--r-- 1 LENOVO 197121 225 Aug  5 23:05 GITHUB-Credentional.txt
+-rw-r--r-- 1 LENOVO 197121 124 Aug 18 15:47 major-milestones
+drwxr-xr-x 1 LENOVO 197121   0 Aug 20 11:44 GIT-Projects/
+drwxr-xr-x 1 LENOVO 197121   0 Aug 23 21:19 git-fast/
+drwxr-xr-x 1 LENOVO 197121   0 Aug 23 23:43 demo-branching/
+-rw-r--r-- 1 LENOVO 197121 47K Aug 23 23:48 GIT-Learning.txt
+
+LENOVO@LAPTOP-STBUPON9 MINGW64 /d/SUNIL/Learning/GIT-GITHUB (master)
+$ cd demo-branching/
+
+LENOVO@LAPTOP-STBUPON9 MINGW64 /d/SUNIL/Learning/GIT-GITHUB/demo-branching (master)
+$ ls -ltrh
+total 2.0K
+-rw-r--r-- 1 LENOVO 197121 138 Aug 23 23:28 robots.txt
+-rw-r--r-- 1 LENOVO 197121  88 Aug 23 23:43 humans.txt
+
+LENOVO@LAPTOP-STBUPON9 MINGW64 /d/SUNIL/Learning/GIT-GITHUB/demo-branching (master)
+$ git branch -a
+* master
+  new-branch-1
+  new-branch-2
+
+LENOVO@LAPTOP-STBUPON9 MINGW64 /d/SUNIL/Learning/GIT-GITHUB/demo-branching (master)
+$ git branch
+* master
+  new-branch-1
+  new-branch-2
+
+LENOVO@LAPTOP-STBUPON9 MINGW64 /d/SUNIL/Learning/GIT-GITHUB/demo-branching (master)
+$ git log --oneline --decorate --graph --all
+* 6ac2919 (new-branch-2, new-branch-1) humans for good society
+* 4a2a73b (HEAD -> master) robots changing life
+* e1285f8 good humans
+* 86b9c01 todays changes in the file
+
+LENOVO@LAPTOP-STBUPON9 MINGW64 /d/SUNIL/Learning/GIT-GITHUB/demo-branching (master)
+$ cd ..
+
+LENOVO@LAPTOP-STBUPON9 MINGW64 /d/SUNIL/Learning/GIT-GITHUB (master)
+$ mkdir demo-merge
+
+LENOVO@LAPTOP-STBUPON9 MINGW64 /d/SUNIL/Learning/GIT-GITHUB (master)
+$ ls -ltrh
+total 47M
+-rwxr-xr-x 1 LENOVO 197121 47M Jan  6  2021 Git-2.30.0-64-bit.exe*
+-rw-r--r-- 1 LENOVO 197121 225 Aug  5 23:05 GITHUB-Credentional.txt
+-rw-r--r-- 1 LENOVO 197121 124 Aug 18 15:47 major-milestones
+drwxr-xr-x 1 LENOVO 197121   0 Aug 20 11:44 GIT-Projects/
+drwxr-xr-x 1 LENOVO 197121   0 Aug 23 21:19 git-fast/
+drwxr-xr-x 1 LENOVO 197121   0 Aug 23 23:43 demo-branching/
+-rw-r--r-- 1 LENOVO 197121 47K Aug 23 23:48 GIT-Learning.txt
+drwxr-xr-x 1 LENOVO 197121   0 Aug 24 20:32 demo-merge/
+
+LENOVO@LAPTOP-STBUPON9 MINGW64 /d/SUNIL/Learning/GIT-GITHUB (master)
+$ cd demo-merge
+
+LENOVO@LAPTOP-STBUPON9 MINGW64 /d/SUNIL/Learning/GIT-GITHUB/demo-merge (master)
+$ ls -ltrh
+total 0
+
+LENOVO@LAPTOP-STBUPON9 MINGW64 /d/SUNIL/Learning/GIT-GITHUB/demo-merge (master)
+$ cd ..
+
+LENOVO@LAPTOP-STBUPON9 MINGW64 /d/SUNIL/Learning/GIT-GITHUB (master)
+$ ls -ltrh
+total 47M
+-rwxr-xr-x 1 LENOVO 197121 47M Jan  6  2021 Git-2.30.0-64-bit.exe*
+-rw-r--r-- 1 LENOVO 197121 225 Aug  5 23:05 GITHUB-Credentional.txt
+-rw-r--r-- 1 LENOVO 197121 124 Aug 18 15:47 major-milestones
+drwxr-xr-x 1 LENOVO 197121   0 Aug 20 11:44 GIT-Projects/
+drwxr-xr-x 1 LENOVO 197121   0 Aug 23 21:19 git-fast/
+drwxr-xr-x 1 LENOVO 197121   0 Aug 23 23:43 demo-branching/
+-rw-r--r-- 1 LENOVO 197121 47K Aug 23 23:48 GIT-Learning.txt
+drwxr-xr-x 1 LENOVO 197121   0 Aug 24 20:32 demo-merge/
+
+LENOVO@LAPTOP-STBUPON9 MINGW64 /d/SUNIL/Learning/GIT-GITHUB (master)
+$ cd git-fast/
+
+LENOVO@LAPTOP-STBUPON9 MINGW64 /d/SUNIL/Learning/GIT-GITHUB/git-fast (master)
+$ ls -ltrh
+total 5.0K
+drwxr-xr-x 1 LENOVO 197121  0 Aug  5 21:51 main-demo-repo-1/
+drwxr-xr-x 1 LENOVO 197121  0 Aug  5 21:56 main-demo-repo-2/
+drwxr-xr-x 1 LENOVO 197121  0 Aug 18 15:48 git-github/
+-rw-r--r-- 1 LENOVO 197121 12 Aug 23 21:19 newfile
+
+LENOVO@LAPTOP-STBUPON9 MINGW64 /d/SUNIL/Learning/GIT-GITHUB/git-fast (master)
+$ cd git-github/
+
+LENOVO@LAPTOP-STBUPON9 MINGW64 /d/SUNIL/Learning/GIT-GITHUB/git-fast/git-github (master)
+$ ls -ltrh
+total 7.0K
+-rw-r--r-- 1 LENOVO 197121  56 Aug  5 21:04 README.md
+-rw-r--r-- 1 LENOVO 197121   0 Aug  5 21:04 README2.md
+-rw-r--r-- 1 LENOVO 197121  16 Aug  5 21:04 README1.md
+-rw-r--r-- 1 LENOVO 197121  11 Aug  5 21:04 file2.txt
+-rw-r--r-- 1 LENOVO 197121  36 Aug  5 21:04 file1.txt
+-rw-r--r-- 1 LENOVO 197121  10 Aug  5 21:04 file3.txt
+-rw-r--r-- 1 LENOVO 197121 128 Aug 18 13:21 major-milestones
+-rw-r--r-- 1 LENOVO 197121 225 Aug 18 15:48 file4.txt
+
+LENOVO@LAPTOP-STBUPON9 MINGW64 /d/SUNIL/Learning/GIT-GITHUB/git-fast/git-github (master)
+$ cd ../main-demo-repo-1/
+
+LENOVO@LAPTOP-STBUPON9 MINGW64 /d/SUNIL/Learning/GIT-GITHUB/git-fast/main-demo-repo-1 (master)
+$ ls -ltrh
+total 0
+
+LENOVO@LAPTOP-STBUPON9 MINGW64 /d/SUNIL/Learning/GIT-GITHUB/git-fast/main-demo-repo-1 (master)
+$ cd ../main-demo-repo-2/
+
+LENOVO@LAPTOP-STBUPON9 MINGW64 /d/SUNIL/Learning/GIT-GITHUB/git-fast/main-demo-repo-2 (main)
+$ ls -ltrh
+total 1.0K
+-rw-r--r-- 1 LENOVO 197121 10 Aug  5 21:56 main-demo-file-1
+
+LENOVO@LAPTOP-STBUPON9 MINGW64 /d/SUNIL/Learning/GIT-GITHUB/git-fast/main-demo-repo-2 (main)
+$ cd ..
+
+LENOVO@LAPTOP-STBUPON9 MINGW64 /d/SUNIL/Learning/GIT-GITHUB/git-fast (master)
+$ ls -ltrh
+total 5.0K
+drwxr-xr-x 1 LENOVO 197121  0 Aug  5 21:51 main-demo-repo-1/
+drwxr-xr-x 1 LENOVO 197121  0 Aug  5 21:56 main-demo-repo-2/
+drwxr-xr-x 1 LENOVO 197121  0 Aug 18 15:48 git-github/
+-rw-r--r-- 1 LENOVO 197121 12 Aug 23 21:19 newfile
+
+LENOVO@LAPTOP-STBUPON9 MINGW64 /d/SUNIL/Learning/GIT-GITHUB/git-fast (master)
+$ cd ..
+
+LENOVO@LAPTOP-STBUPON9 MINGW64 /d/SUNIL/Learning/GIT-GITHUB (master)
+$ ls -ltrh
+total 47M
+-rwxr-xr-x 1 LENOVO 197121 47M Jan  6  2021 Git-2.30.0-64-bit.exe*
+-rw-r--r-- 1 LENOVO 197121 225 Aug  5 23:05 GITHUB-Credentional.txt
+-rw-r--r-- 1 LENOVO 197121 124 Aug 18 15:47 major-milestones
+drwxr-xr-x 1 LENOVO 197121   0 Aug 20 11:44 GIT-Projects/
+drwxr-xr-x 1 LENOVO 197121   0 Aug 23 21:19 git-fast/
+drwxr-xr-x 1 LENOVO 197121   0 Aug 23 23:43 demo-branching/
+-rw-r--r-- 1 LENOVO 197121 47K Aug 23 23:48 GIT-Learning.txt
+drwxr-xr-x 1 LENOVO 197121   0 Aug 24 20:32 demo-merge/
+
+LENOVO@LAPTOP-STBUPON9 MINGW64 /d/SUNIL/Learning/GIT-GITHUB (master)
+$ cd GIT-Projects/
+
+LENOVO@LAPTOP-STBUPON9 MINGW64 /d/SUNIL/Learning/GIT-GITHUB/GIT-Projects (master)
+$ ls -ltrh
+total 14K
+-rw-r--r-- 1 LENOVO 197121 56 Oct 24  2018 README.md
+-rw-r--r-- 1 LENOVO 197121 11 Oct 24  2018 file2.txt
+-rw-r--r-- 1 LENOVO 197121 10 Oct 24  2018 file3.txt
+-rw-r--r-- 1 LENOVO 197121 36 Oct 24  2018 file1.txt
+-rw-r--r-- 1 LENOVO 197121 16 Jan  7  2021 README1.md
+-rw-r--r-- 1 LENOVO 197121  0 May 15 18:58 README2.md
+drwxr-xr-x 1 LENOVO 197121  0 Jun  7 11:42 myRepoFromExistingSource/
+drwxr-xr-x 1 LENOVO 197121  0 Jun  7 12:04 hellogitworld/
+drwxr-xr-x 1 LENOVO 197121  0 Jun  7 12:36 myRepoFromScratch/
+-rw-r--r-- 1 LENOVO 197121 10 Aug 20 11:44 file4.txt
+
+LENOVO@LAPTOP-STBUPON9 MINGW64 /d/SUNIL/Learning/GIT-GITHUB/GIT-Projects (master)
+$ cd myRepoFrom
+bash: cd: myRepoFrom: No such file or directory
+
+LENOVO@LAPTOP-STBUPON9 MINGW64 /d/SUNIL/Learning/GIT-GITHUB/GIT-Projects (master)
+$ cd myRepoFromScratch/
+
+LENOVO@LAPTOP-STBUPON9 MINGW64 /d/SUNIL/Learning/GIT-GITHUB/GIT-Projects/myRepoFromScratch (master)
+$ ls -ltrh
+total 2.0K
+-rw-r--r-- 1 LENOVO 197121 58 Jun  7 12:17 demoFile1
+-rw-r--r-- 1 LENOVO 197121 12 Jun  7 12:36 testfile
+
+LENOVO@LAPTOP-STBUPON9 MINGW64 /d/SUNIL/Learning/GIT-GITHUB/GIT-Projects/myRepoFromScratch (master)
+$ cd ../myRepoFromExistingSource/
+
+LENOVO@LAPTOP-STBUPON9 MINGW64 /d/SUNIL/Learning/GIT-GITHUB/GIT-Projects/myRepoFromExistingSource (master)
+$ ls -ltrh
+total 35K
+-rw-r--r-- 1 LENOVO 197121 3.5K Jun  7 06:01 tile.png
+-rw-r--r-- 1 LENOVO 197121 1.9K Jun  7 06:01 tile-wide.png
+-rw-r--r-- 1 LENOVO 197121   78 Jun  7 06:01 robots.txt
+-rw-r--r-- 1 LENOVO 197121 5.0K Jun  7 06:01 index.html
+drwxr-xr-x 1 LENOVO 197121    0 Jun  7 06:01 img/
+-rw-r--r-- 1 LENOVO 197121  191 Jun  7 06:01 humans.txt
+-rw-r--r-- 1 LENOVO 197121  766 Jun  7 06:01 favicon.ico
+-rw-r--r-- 1 LENOVO 197121  603 Jun  7 06:01 crossdomain.xml
+-rw-r--r-- 1 LENOVO 197121  416 Jun  7 06:01 browserconfig.xml
+-rw-r--r-- 1 LENOVO 197121 3.9K Jun  7 06:01 apple-touch-icon.png
+-rw-r--r-- 1 LENOVO 197121 1.3K Jun  7 06:01 404.html
+drwxr-xr-x 1 LENOVO 197121    0 Jun  7 11:36 js/
+drwxr-xr-x 1 LENOVO 197121    0 Jun  7 11:36 css/
+
+LENOVO@LAPTOP-STBUPON9 MINGW64 /d/SUNIL/Learning/GIT-GITHUB/GIT-Projects/myRepoFromExistingSource (master)
+$ cd ..
+
+LENOVO@LAPTOP-STBUPON9 MINGW64 /d/SUNIL/Learning/GIT-GITHUB/GIT-Projects (master)
+$ cd hellogitworld/
+
+LENOVO@LAPTOP-STBUPON9 MINGW64 /d/SUNIL/Learning/GIT-GITHUB/GIT-Projects/hellogitworld (master)
+$ ls -ltrh
+total 11K
+-rw-r--r-- 1 LENOVO 197121 810 Jun  7 12:04 README.txt
+-rw-r--r-- 1 LENOVO 197121 121 Jun  7 12:04 build.gradle
+drwxr-xr-x 1 LENOVO 197121   0 Jun  7 12:04 resources/
+-rw-r--r-- 1 LENOVO 197121 657 Jun  7 12:04 pom.xml
+-rw-r--r-- 1 LENOVO 197121   0 Jun  7 12:04 fix.txt
+-rwxr-xr-x 1 LENOVO 197121  65 Jun  7 12:04 runme.sh*
+drwxr-xr-x 1 LENOVO 197121   0 Jun  7 12:04 src/
+
+LENOVO@LAPTOP-STBUPON9 MINGW64 /d/SUNIL/Learning/GIT-GITHUB/GIT-Projects/hellogitworld (master)
+$ cd src/
+
+LENOVO@LAPTOP-STBUPON9 MINGW64 /d/SUNIL/Learning/GIT-GITHUB/GIT-Projects/hellogitworld/src (master)
+$ ls -ltrh
+total 5.0K
+-rw-r--r-- 1 LENOVO 197121  55 Jun  7 12:04 Division.groovy
+-rw-r--r-- 1 LENOVO 197121  46 Jun  7 12:04 Square.groovy
+-rw-r--r-- 1 LENOVO 197121 605 Jun  7 12:04 Main.groovy
+-rw-r--r-- 1 LENOVO 197121  52 Jun  7 12:04 Sum.groovy
+-rw-r--r-- 1 LENOVO 197121  57 Jun  7 12:04 Subtract.groovy
+drwxr-xr-x 1 LENOVO 197121   0 Jun  7 12:04 main/
+drwxr-xr-x 1 LENOVO 197121   0 Jun  7 12:04 test/
+
+LENOVO@LAPTOP-STBUPON9 MINGW64 /d/SUNIL/Learning/GIT-GITHUB/GIT-Projects/hellogitworld/src (master)
+$ cd main
+
+LENOVO@LAPTOP-STBUPON9 MINGW64 /d/SUNIL/Learning/GIT-GITHUB/GIT-Projects/hellogitworld/src/main (master)
+$ ls -ltrh
+total 0
+drwxr-xr-x 1 LENOVO 197121 0 Jun  7 12:04 java/
+
+LENOVO@LAPTOP-STBUPON9 MINGW64 /d/SUNIL/Learning/GIT-GITHUB/GIT-Projects/hellogitworld/src/main (master)
+$ cd java/
+
+LENOVO@LAPTOP-STBUPON9 MINGW64 /d/SUNIL/Learning/GIT-GITHUB/GIT-Projects/hellogitworld/src/main/java (master)
+$ ls -ltrh
+total 0
+drwxr-xr-x 1 LENOVO 197121 0 Jun  7 12:04 com/
+
+LENOVO@LAPTOP-STBUPON9 MINGW64 /d/SUNIL/Learning/GIT-GITHUB/GIT-Projects/hellogitworld/src/main/java (master)
+$ cd ../../..
+
+LENOVO@LAPTOP-STBUPON9 MINGW64 /d/SUNIL/Learning/GIT-GITHUB/GIT-Projects/hellogitworld (master)
+$ cd ../
+
+LENOVO@LAPTOP-STBUPON9 MINGW64 /d/SUNIL/Learning/GIT-GITHUB/GIT-Projects (master)
+$ ls -ltrh
+total 14K
+-rw-r--r-- 1 LENOVO 197121 56 Oct 24  2018 README.md
+-rw-r--r-- 1 LENOVO 197121 11 Oct 24  2018 file2.txt
+-rw-r--r-- 1 LENOVO 197121 10 Oct 24  2018 file3.txt
+-rw-r--r-- 1 LENOVO 197121 36 Oct 24  2018 file1.txt
+-rw-r--r-- 1 LENOVO 197121 16 Jan  7  2021 README1.md
+-rw-r--r-- 1 LENOVO 197121  0 May 15 18:58 README2.md
+drwxr-xr-x 1 LENOVO 197121  0 Jun  7 11:42 myRepoFromExistingSource/
+drwxr-xr-x 1 LENOVO 197121  0 Jun  7 12:04 hellogitworld/
+drwxr-xr-x 1 LENOVO 197121  0 Jun  7 12:36 myRepoFromScratch/
+-rw-r--r-- 1 LENOVO 197121 10 Aug 20 11:44 file4.txt
+
+LENOVO@LAPTOP-STBUPON9 MINGW64 /d/SUNIL/Learning/GIT-GITHUB/GIT-Projects (master)
+$ cd ..
+
+LENOVO@LAPTOP-STBUPON9 MINGW64 /d/SUNIL/Learning/GIT-GITHUB (master)
+$ ls -ltrh
+total 47M
+-rwxr-xr-x 1 LENOVO 197121 47M Jan  6  2021 Git-2.30.0-64-bit.exe*
+-rw-r--r-- 1 LENOVO 197121 225 Aug  5 23:05 GITHUB-Credentional.txt
+-rw-r--r-- 1 LENOVO 197121 124 Aug 18 15:47 major-milestones
+drwxr-xr-x 1 LENOVO 197121   0 Aug 20 11:44 GIT-Projects/
+drwxr-xr-x 1 LENOVO 197121   0 Aug 23 21:19 git-fast/
+drwxr-xr-x 1 LENOVO 197121   0 Aug 23 23:43 demo-branching/
+-rw-r--r-- 1 LENOVO 197121 47K Aug 23 23:48 GIT-Learning.txt
+drwxr-xr-x 1 LENOVO 197121   0 Aug 24 20:32 demo-merge/
+
+LENOVO@LAPTOP-STBUPON9 MINGW64 /d/SUNIL/Learning/GIT-GITHUB (master)
+$ cd demo-merge/
+
+LENOVO@LAPTOP-STBUPON9 MINGW64 /d/SUNIL/Learning/GIT-GITHUB/demo-merge (master)
+$ ls -ltrh
+total 0
+
+LENOVO@LAPTOP-STBUPON9 MINGW64 /d/SUNIL/Learning/GIT-GITHUB/demo-merge (master)
+$ git branch
+* master
+  new-branch-1
+  new-branch-2
+
+LENOVO@LAPTOP-STBUPON9 MINGW64 /d/SUNIL/Learning/GIT-GITHUB/demo-merge (master)
+$ git branch -d new-branch-1 new-branch-2
+error: The branch 'new-branch-1' is not fully merged.
+If you are sure you want to delete it, run 'git branch -D new-branch-1'.
+error: The branch 'new-branch-2' is not fully merged.
+If you are sure you want to delete it, run 'git branch -D new-branch-2'.
+
+LENOVO@LAPTOP-STBUPON9 MINGW64 /d/SUNIL/Learning/GIT-GITHUB/demo-merge (master)
+$ git branch -D new-branch-1 new-branch-2
+Deleted branch new-branch-1 (was 6ac2919).
+Deleted branch new-branch-2 (was 6ac2919).
+
+LENOVO@LAPTOP-STBUPON9 MINGW64 /d/SUNIL/Learning/GIT-GITHUB/demo-merge (master)
+$ git branch
+* master
+
+LENOVO@LAPTOP-STBUPON9 MINGW64 /d/SUNIL/Learning/GIT-GITHUB/demo-merge (master)
+$ git checkout -b ff-branch
+Switched to a new branch 'ff-branch'
+
+LENOVO@LAPTOP-STBUPON9 MINGW64 /d/SUNIL/Learning/GIT-GITHUB/demo-merge (ff-branch)
+$ git branch
+* ff-branch
+  master
+
+LENOVO@LAPTOP-STBUPON9 MINGW64 /d/SUNIL/Learning/GIT-GITHUB/demo-merge (ff-branch)
+$ ls
+
+LENOVO@LAPTOP-STBUPON9 MINGW64 /d/SUNIL/Learning/GIT-GITHUB/demo-merge (ff-branch)
+$ vim humans.txt
+
+LENOVO@LAPTOP-STBUPON9 MINGW64 /d/SUNIL/Learning/GIT-GITHUB/demo-merge (ff-branch)
+$ git commit -am "human responsibilty"
+On branch ff-branch
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        ../GIT-Learning.txt
+        ../GIT-Projects/
+        ../GITHUB-Credentional.txt
+        ../Git-2.30.0-64-bit.exe
+        ./
+        ../git-fast/
+        ../major-milestones
+
+nothing added to commit but untracked files present (use "git add" to track)
+
+LENOVO@LAPTOP-STBUPON9 MINGW64 /d/SUNIL/Learning/GIT-GITHUB/demo-merge (ff-branch)
+$ git add .
+warning: LF will be replaced by CRLF in demo-merge/humans.txt.
+The file will have its original line endings in your working directory
+
+LENOVO@LAPTOP-STBUPON9 MINGW64 /d/SUNIL/Learning/GIT-GITHUB/demo-merge (ff-branch)
+$ git commit -am "human responsibilty"
+[ff-branch ab308d8] human responsibilty
+ 1 file changed, 7 insertions(+)
+ create mode 100644 demo-merge/humans.txt
+
+LENOVO@LAPTOP-STBUPON9 MINGW64 /d/SUNIL/Learning/GIT-GITHUB/demo-merge (ff-branch)
+$ git log --oneline
+ab308d8 (HEAD -> ff-branch) human responsibilty
+4a2a73b (master) robots changing life
+e1285f8 good humans
+86b9c01 todays changes in the file
+
+LENOVO@LAPTOP-STBUPON9 MINGW64 /d/SUNIL/Learning/GIT-GITHUB/demo-merge (ff-branch)
+$ git checkout master
+Switched to branch 'master'
+
+LENOVO@LAPTOP-STBUPON9 MINGW64 /d/SUNIL/Learning/GIT-GITHUB/demo-merge
+$ git log --oneline
+fatal: failed to stat 'D:/SUNIL/Learning/GIT-GITHUB/demo-merge': No such file or directory
+
+LENOVO@LAPTOP-STBUPON9 MINGW64 /d/SUNIL/Learning/GIT-GITHUB/demo-merge
+$ ls -ltrh
+ls: cannot open directory '.': No such file or directory
+
+LENOVO@LAPTOP-STBUPON9 MINGW64 /d/SUNIL/Learning/GIT-GITHUB/demo-merge
+$ cd ..
+
+LENOVO@LAPTOP-STBUPON9 MINGW64 /d/SUNIL/Learning/GIT-GITHUB (master)
+$ ls -ltrh
+total 47M
+-rwxr-xr-x 1 LENOVO 197121 47M Jan  6  2021 Git-2.30.0-64-bit.exe*
+-rw-r--r-- 1 LENOVO 197121 225 Aug  5 23:05 GITHUB-Credentional.txt
+-rw-r--r-- 1 LENOVO 197121 124 Aug 18 15:47 major-milestones
+drwxr-xr-x 1 LENOVO 197121   0 Aug 20 11:44 GIT-Projects/
+drwxr-xr-x 1 LENOVO 197121   0 Aug 23 21:19 git-fast/
+drwxr-xr-x 1 LENOVO 197121   0 Aug 23 23:43 demo-branching/
+-rw-r--r-- 1 LENOVO 197121 47K Aug 23 23:48 GIT-Learning.txt
+
+LENOVO@LAPTOP-STBUPON9 MINGW64 /d/SUNIL/Learning/GIT-GITHUB (master)
+$ cd git-fast/
+
+LENOVO@LAPTOP-STBUPON9 MINGW64 /d/SUNIL/Learning/GIT-GITHUB/git-fast (master)
+$ ls -ltrh
+total 5.0K
+drwxr-xr-x 1 LENOVO 197121  0 Aug  5 21:51 main-demo-repo-1/
+drwxr-xr-x 1 LENOVO 197121  0 Aug  5 21:56 main-demo-repo-2/
+drwxr-xr-x 1 LENOVO 197121  0 Aug 18 15:48 git-github/
+-rw-r--r-- 1 LENOVO 197121 12 Aug 23 21:19 newfile
+
+LENOVO@LAPTOP-STBUPON9 MINGW64 /d/SUNIL/Learning/GIT-GITHUB/git-fast (master)
+$ cd ..
+
+LENOVO@LAPTOP-STBUPON9 MINGW64 /d/SUNIL/Learning/GIT-GITHUB (master)
+$ ls -ltrh
+total 47M
+-rwxr-xr-x 1 LENOVO 197121 47M Jan  6  2021 Git-2.30.0-64-bit.exe*
+-rw-r--r-- 1 LENOVO 197121 225 Aug  5 23:05 GITHUB-Credentional.txt
+-rw-r--r-- 1 LENOVO 197121 124 Aug 18 15:47 major-milestones
+drwxr-xr-x 1 LENOVO 197121   0 Aug 20 11:44 GIT-Projects/
+drwxr-xr-x 1 LENOVO 197121   0 Aug 23 21:19 git-fast/
+drwxr-xr-x 1 LENOVO 197121   0 Aug 23 23:43 demo-branching/
+-rw-r--r-- 1 LENOVO 197121 47K Aug 23 23:48 GIT-Learning.txt
+
+LENOVO@LAPTOP-STBUPON9 MINGW64 /d/SUNIL/Learning/GIT-GITHUB (master)
+$ git branch
+  ff-branch
+* master
+
+LENOVO@LAPTOP-STBUPON9 MINGW64 /d/SUNIL/Learning/GIT-GITHUB (master)
+$ git checkout ff-branch
+Switched to branch 'ff-branch'
+
+LENOVO@LAPTOP-STBUPON9 MINGW64 /d/SUNIL/Learning/GIT-GITHUB (ff-branch)
+$ ls -ltrh
+total 47M
+-rwxr-xr-x 1 LENOVO 197121 47M Jan  6  2021 Git-2.30.0-64-bit.exe*
+-rw-r--r-- 1 LENOVO 197121 225 Aug  5 23:05 GITHUB-Credentional.txt
+-rw-r--r-- 1 LENOVO 197121 124 Aug 18 15:47 major-milestones
+drwxr-xr-x 1 LENOVO 197121   0 Aug 20 11:44 GIT-Projects/
+drwxr-xr-x 1 LENOVO 197121   0 Aug 23 21:19 git-fast/
+drwxr-xr-x 1 LENOVO 197121   0 Aug 23 23:43 demo-branching/
+-rw-r--r-- 1 LENOVO 197121 47K Aug 23 23:48 GIT-Learning.txt
+drwxr-xr-x 1 LENOVO 197121   0 Aug 24 21:04 demo-merge/
+
+LENOVO@LAPTOP-STBUPON9 MINGW64 /d/SUNIL/Learning/GIT-GITHUB (ff-branch)
+$ cd demo-merge/
+
+LENOVO@LAPTOP-STBUPON9 MINGW64 /d/SUNIL/Learning/GIT-GITHUB/demo-merge (ff-branch)
+$ ls -ltrh
+total 1.0K
+-rw-r--r-- 1 LENOVO 197121 141 Aug 24 21:04 humans.txt
+
+LENOVO@LAPTOP-STBUPON9 MINGW64 /d/SUNIL/Learning/GIT-GITHUB/demo-merge (ff-branch)
+$ git checkout master
+Switched to branch 'master'
+
+LENOVO@LAPTOP-STBUPON9 MINGW64 /d/SUNIL/Learning/GIT-GITHUB/demo-merge
+$ ls
+ls: cannot open directory '.': No such file or directory
+
+LENOVO@LAPTOP-STBUPON9 MINGW64 /d/SUNIL/Learning/GIT-GITHUB/demo-merge
+$ git diff master ff-branch
+fatal: failed to stat 'D:/SUNIL/Learning/GIT-GITHUB/demo-merge': No such file or directory
+
+LENOVO@LAPTOP-STBUPON9 MINGW64 /d/SUNIL/Learning/GIT-GITHUB/demo-merge
+$ git checkout ff-branch
+fatal: failed to stat 'D:/SUNIL/Learning/GIT-GITHUB/demo-merge': No such file or directory
+
+LENOVO@LAPTOP-STBUPON9 MINGW64 /d/SUNIL/Learning/GIT-GITHUB/demo-merge
+$ cd ..
+
+LENOVO@LAPTOP-STBUPON9 MINGW64 /d/SUNIL/Learning/GIT-GITHUB (master)
+$ git diff master ff-branch
+diff --git a/demo-merge/humans.txt b/demo-merge/humans.txt
+new file mode 100644
+index 0000000..a1e62d8
+--- /dev/null
++++ b/demo-merge/humans.txt
+@@ -0,0 +1,7 @@
++# humanstxt.org/
++# The humans responsible & technology colophon
++# Humans have both individual and collective responsibility
++
++# TEAM
++
++
+
+LENOVO@LAPTOP-STBUPON9 MINGW64 /d/SUNIL/Learning/GIT-GITHUB (master)
+$ git difftool master ff-branch
+
+LENOVO@LAPTOP-STBUPON9 MINGW64 /d/SUNIL/Learning/GIT-GITHUB (master)
+$ git merge ff-branch
+Updating 4a2a73b..ab308d8
+Fast-forward
+ demo-merge/humans.txt | 7 +++++++
+ 1 file changed, 7 insertions(+)
+ create mode 100644 demo-merge/humans.txt
+
+LENOVO@LAPTOP-STBUPON9 MINGW64 /d/SUNIL/Learning/GIT-GITHUB (master)
+$ ls -ltrh
+total 47M
+-rwxr-xr-x 1 LENOVO 197121 47M Jan  6  2021 Git-2.30.0-64-bit.exe*
+-rw-r--r-- 1 LENOVO 197121 225 Aug  5 23:05 GITHUB-Credentional.txt
+-rw-r--r-- 1 LENOVO 197121 124 Aug 18 15:47 major-milestones
+drwxr-xr-x 1 LENOVO 197121   0 Aug 20 11:44 GIT-Projects/
+drwxr-xr-x 1 LENOVO 197121   0 Aug 23 21:19 git-fast/
+drwxr-xr-x 1 LENOVO 197121   0 Aug 23 23:43 demo-branching/
+-rw-r--r-- 1 LENOVO 197121 47K Aug 23 23:48 GIT-Learning.txt
+drwxr-xr-x 1 LENOVO 197121   0 Aug 24 21:08 demo-merge/
+
+LENOVO@LAPTOP-STBUPON9 MINGW64 /d/SUNIL/Learning/GIT-GITHUB (master)
+$ git log --oneline --decorate --graph
+* ab308d8 (HEAD -> master, ff-branch) human responsibilty
+* 4a2a73b robots changing life
+* e1285f8 good humans
+* 86b9c01 todays changes in the file
+
+LENOVO@LAPTOP-STBUPON9 MINGW64 /d/SUNIL/Learning/GIT-GITHUB (master)
+$ git branch -d ff-branch
+Deleted branch ff-branch (was ab308d8).
+
+LENOVO@LAPTOP-STBUPON9 MINGW64 /d/SUNIL/Learning/GIT-GITHUB (master)
+$ gir branch
+bash: gir: command not found
+
+LENOVO@LAPTOP-STBUPON9 MINGW64 /d/SUNIL/Learning/GIT-GITHUB (master)
+$ git branch
+* master
+
+LENOVO@LAPTOP-STBUPON9 MINGW64 /d/SUNIL/Learning/GIT-GITHUB (master)
+$ git log --online --decorate --graph --all
+fatal: unrecognized argument: --online
+
+LENOVO@LAPTOP-STBUPON9 MINGW64 /d/SUNIL/Learning/GIT-GITHUB (master)
+$ git log --oneline --decorate --graph
+* ab308d8 (HEAD -> master) human responsibilty
+* 4a2a73b robots changing life
+* e1285f8 good humans
+* 86b9c01 todays changes in the file
+
+LENOVO@LAPTOP-STBUPON9 MINGW64 /d/SUNIL/Learning/GIT-GITHUB (master)
+$ ls -ltrh
+total 47M
+-rwxr-xr-x 1 LENOVO 197121 47M Jan  6  2021 Git-2.30.0-64-bit.exe*
+-rw-r--r-- 1 LENOVO 197121 225 Aug  5 23:05 GITHUB-Credentional.txt
+-rw-r--r-- 1 LENOVO 197121 124 Aug 18 15:47 major-milestones
+drwxr-xr-x 1 LENOVO 197121   0 Aug 20 11:44 GIT-Projects/
+drwxr-xr-x 1 LENOVO 197121   0 Aug 23 21:19 git-fast/
+drwxr-xr-x 1 LENOVO 197121   0 Aug 23 23:43 demo-branching/
+-rw-r--r-- 1 LENOVO 197121 47K Aug 23 23:48 GIT-Learning.txt
+drwxr-xr-x 1 LENOVO 197121   0 Aug 24 21:08 demo-merge/
+
+LENOVO@LAPTOP-STBUPON9 MINGW64 /d/SUNIL/Learning/GIT-GITHUB (master)
+$ cd demo-merge/
+
+LENOVO@LAPTOP-STBUPON9 MINGW64 /d/SUNIL/Learning/GIT-GITHUB/demo-merge (master)
+$ ls -ltrh
+total 1.0K
+-rw-r--r-- 1 LENOVO 197121 141 Aug 24 21:08 humans.txt
+
+LENOVO@LAPTOP-STBUPON9 MINGW64 /d/SUNIL/Learning/GIT-GITHUB/demo-merge (master)
+$ cat humans.txt
+# humanstxt.org/
+# The humans responsible & technology colophon
+# Humans have both individual and collective responsibility
+
+# TEAM
+
+
+
+LENOVO@LAPTOP-STBUPON9 MINGW64 /d/SUNIL/Learning/GIT-GITHUB/demo-merge (master)
+$ git branch
+* master
+
+LENOVO@LAPTOP-STBUPON9 MINGW64 /d/SUNIL/Learning/GIT-GITHUB/demo-merge (master)
+$ git branch -b no-ff-branch
+error: unknown switch `b'
+usage: git branch [<options>] [-r | -a] [--merged] [--no-merged]
+   or: git branch [<options>] [-l] [-f] <branch-name> [<start-point>]
+   or: git branch [<options>] [-r] (-d | -D) <branch-name>...
+   or: git branch [<options>] (-m | -M) [<old-branch>] <new-branch>
+   or: git branch [<options>] (-c | -C) [<old-branch>] <new-branch>
+   or: git branch [<options>] [-r | -a] [--points-at]
+   or: git branch [<options>] [-r | -a] [--format]
+
+Generic options
+    -v, --verbose         show hash and subject, give twice for upstream branch
+    -q, --quiet           suppress informational messages
+    -t, --track           set up tracking mode (see git-pull(1))
+    -u, --set-upstream-to <upstream>
+                          change the upstream info
+    --unset-upstream      unset the upstream info
+    --color[=<when>]      use colored output
+    -r, --remotes         act on remote-tracking branches
+    --contains <commit>   print only branches that contain the commit
+    --no-contains <commit>
+                          print only branches that don't contain the commit
+    --abbrev[=<n>]        use <n> digits to display object names
+
+Specific git-branch actions:
+    -a, --all             list both remote-tracking and local branches
+    -d, --delete          delete fully merged branch
+    -D                    delete branch (even if not merged)
+    -m, --move            move/rename a branch and its reflog
+    -M                    move/rename a branch, even if target exists
+    -c, --copy            copy a branch and its reflog
+    -C                    copy a branch, even if target exists
+    -l, --list            list branch names
+    --show-current        show current branch name
+    --create-reflog       create the branch's reflog
+    --edit-description    edit the description for the branch
+    -f, --force           force creation, move/rename, deletion
+    --merged <commit>     print only branches that are merged
+    --no-merged <commit>  print only branches that are not merged
+    --column[=<style>]    list branches in columns
+    --sort <key>          field name to sort on
+    --points-at <object>  print only branches of the object
+    -i, --ignore-case     sorting and filtering are case insensitive
+    --format <format>     format to use for the output
+
+
+LENOVO@LAPTOP-STBUPON9 MINGW64 /d/SUNIL/Learning/GIT-GITHUB/demo-merge (master)
+$ git checkout -b no-ff-branch
+Switched to a new branch 'no-ff-branch'
+
+LENOVO@LAPTOP-STBUPON9 MINGW64 /d/SUNIL/Learning/GIT-GITHUB/demo-merge (no-ff-branch)
+$ vim robots.txt
+
+LENOVO@LAPTOP-STBUPON9 MINGW64 /d/SUNIL/Learning/GIT-GITHUB/demo-merge (no-ff-branch)
+$ git add .
+warning: LF will be replaced by CRLF in demo-merge/robots.txt.
+The file will have its original line endings in your working directory
+
+LENOVO@LAPTOP-STBUPON9 MINGW64 /d/SUNIL/Learning/GIT-GITHUB/demo-merge (no-ff-branch)
+$ git commit -am "robots serve humans"
+[no-ff-branch 13de422] robots serve humans
+ 1 file changed, 7 insertions(+)
+ create mode 100644 demo-merge/robots.txt
+
+LENOVO@LAPTOP-STBUPON9 MINGW64 /d/SUNIL/Learning/GIT-GITHUB/demo-merge (no-ff-branch)
+$ ls
+humans.txt  robots.txt
+
+LENOVO@LAPTOP-STBUPON9 MINGW64 /d/SUNIL/Learning/GIT-GITHUB/demo-merge (no-ff-branch)
+$ vim humans.txt
+
+LENOVO@LAPTOP-STBUPON9 MINGW64 /d/SUNIL/Learning/GIT-GITHUB/demo-merge (no-ff-branch)
+$ git commit -am "social being"
+[no-ff-branch d041b78] social being
+ 1 file changed, 1 insertion(+)
+
+LENOVO@LAPTOP-STBUPON9 MINGW64 /d/SUNIL/Learning/GIT-GITHUB/demo-merge (no-ff-branch)
+$ git log --oneline --decorate --graph
+* d041b78 (HEAD -> no-ff-branch) social being
+* 13de422 robots serve humans
+* ab308d8 (master) human responsibilty
+* 4a2a73b robots changing life
+* e1285f8 good humans
+* 86b9c01 todays changes in the file
+
+LENOVO@LAPTOP-STBUPON9 MINGW64 /d/SUNIL/Learning/GIT-GITHUB/demo-merge (no-ff-branch)
+$ git checkout master
+Switched to branch 'master'
+
+LENOVO@LAPTOP-STBUPON9 MINGW64 /d/SUNIL/Learning/GIT-GITHUB/demo-merge (master)
+$ git log --oneline --decorate --graph
+* ab308d8 (HEAD -> master) human responsibilty
+* 4a2a73b robots changing life
+* e1285f8 good humans
+* 86b9c01 todays changes in the file
+
+LENOVO@LAPTOP-STBUPON9 MINGW64 /d/SUNIL/Learning/GIT-GITHUB/demo-merge (master)
+$ git diff master no-ff-branch
+diff --git a/demo-merge/humans.txt b/demo-merge/humans.txt
+index a1e62d8..13cfcf3 100644
+--- a/demo-merge/humans.txt
++++ b/demo-merge/humans.txt
+@@ -1,6 +1,7 @@
+ # humanstxt.org/
+ # The humans responsible & technology colophon
+ # Humans have both individual and collective responsibility
++# A human is a social being
+
+ # TEAM
+
+diff --git a/demo-merge/robots.txt b/demo-merge/robots.txt
+new file mode 100644
+index 0000000..fa531cc
+--- /dev/null
++++ b/demo-merge/robots.txt
+@@ -0,0 +1,7 @@
++-- Robots are intelligent machines
++-- Robots can be used to serve the needs of human beings
++# www.robotstxt.org
++
++# Allow crawling of all content
++User-agent: *
++Disallow:
+
+LENOVO@LAPTOP-STBUPON9 MINGW64 /d/SUNIL/Learning/GIT-GITHUB/demo-merge (master)
+$ git difftool merge no-ff-branch
+fatal: ambiguous argument 'merge': unknown revision or path not in the working tree.
+Use '--' to separate paths from revisions, like this:
+'git <command> [<revision>...] -- [<file>...]'
+
+LENOVO@LAPTOP-STBUPON9 MINGW64 /d/SUNIL/Learning/GIT-GITHUB/demo-merge (master)
+$ git difftool master no-ff-branch
+
+LENOVO@LAPTOP-STBUPON9 MINGW64 /d/SUNIL/Learning/GIT-GITHUB/demo-merge (master)
+$ git merge no-ff-branch --no-ff
+hint: Waiting for your editor to close the file...
+error: There was a problem with the editor ''c:/program files (x86)/sublime text 3/subl.exe' -w'.
+Not committing merge; use 'git commit' to complete the merge.
+
+LENOVO@LAPTOP-STBUPON9 MINGW64 /d/SUNIL/Learning/GIT-GITHUB/demo-merge (master|MERGING)
+$
+
+LENOVO@LAPTOP-STBUPON9 MINGW64 /d/SUNIL/Learning/GIT-GITHUB/demo-merge (master|MERGING)
+$ git merge no-ff-branch --no-ff
+fatal: You have not concluded your merge (MERGE_HEAD exists).
+Please, commit your changes before you merge.
+
+LENOVO@LAPTOP-STBUPON9 MINGW64 /d/SUNIL/Learning/GIT-GITHUB/demo-merge (master|MERGING)
+$ git branch
+* master
+  no-ff-branch
+
+LENOVO@LAPTOP-STBUPON9 MINGW64 /d/SUNIL/Learning/GIT-GITHUB/demo-merge (master|MERGING)
+$ git merge no-ff-branch
+fatal: You have not concluded your merge (MERGE_HEAD exists).
+Please, commit your changes before you merge.
+
+LENOVO@LAPTOP-STBUPON9 MINGW64 /d/SUNIL/Learning/GIT-GITHUB/demo-merge (master|MERGING)
+$ git checkout no-ff-branch
+Switched to branch 'no-ff-branch'
+
+LENOVO@LAPTOP-STBUPON9 MINGW64 /d/SUNIL/Learning/GIT-GITHUB/demo-merge (no-ff-branch)
+$ git status
+On branch no-ff-branch
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        ../GIT-Learning.txt
+        ../GIT-Projects/
+        ../GITHUB-Credentional.txt
+        ../Git-2.30.0-64-bit.exe
+        ../git-fast/
+        ../major-milestones
+
+nothing added to commit but untracked files present (use "git add" to track)
+
+LENOVO@LAPTOP-STBUPON9 MINGW64 /d/SUNIL/Learning/GIT-GITHUB/demo-merge (no-ff-branch)
+$ git commit -am "second changes"
+On branch no-ff-branch
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        ../GIT-Learning.txt
+        ../GIT-Projects/
+        ../GITHUB-Credentional.txt
+        ../Git-2.30.0-64-bit.exe
+        ../git-fast/
+        ../major-milestones
+
+nothing added to commit but untracked files present (use "git add" to track)
+
+LENOVO@LAPTOP-STBUPON9 MINGW64 /d/SUNIL/Learning/GIT-GITHUB/demo-merge (no-ff-branch)
+$ git add .
+
+LENOVO@LAPTOP-STBUPON9 MINGW64 /d/SUNIL/Learning/GIT-GITHUB/demo-merge (no-ff-branch)
+$ git status
+On branch no-ff-branch
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        ../GIT-Learning.txt
+        ../GIT-Projects/
+        ../GITHUB-Credentional.txt
+        ../Git-2.30.0-64-bit.exe
+        ../git-fast/
+        ../major-milestones
+
+nothing added to commit but untracked files present (use "git add" to track)
+
+LENOVO@LAPTOP-STBUPON9 MINGW64 /d/SUNIL/Learning/GIT-GITHUB/demo-merge (no-ff-branch)
+$ git add
+Nothing specified, nothing added.
+hint: Maybe you wanted to say 'git add .'?
+hint: Turn this message off by running
+hint: "git config advice.addEmptyPathspec false"
+
+LENOVO@LAPTOP-STBUPON9 MINGW64 /d/SUNIL/Learning/GIT-GITHUB/demo-merge (no-ff-branch)
+$ git add .
+
+LENOVO@LAPTOP-STBUPON9 MINGW64 /d/SUNIL/Learning/GIT-GITHUB/demo-merge (no-ff-branch)
+$ git commit -am "second changes"
+On branch no-ff-branch
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        ../GIT-Learning.txt
+        ../GIT-Projects/
+        ../GITHUB-Credentional.txt
+        ../Git-2.30.0-64-bit.exe
+        ../git-fast/
+        ../major-milestones
+
+nothing added to commit but untracked files present (use "git add" to track)
+
+LENOVO@LAPTOP-STBUPON9 MINGW64 /d/SUNIL/Learning/GIT-GITHUB/demo-merge (no-ff-branch)
+$ git checkout master
+Switched to branch 'master'
+
+LENOVO@LAPTOP-STBUPON9 MINGW64 /d/SUNIL/Learning/GIT-GITHUB/demo-merge (master)
+$ git merge no-ff-branch --no-ff
+Merge made by the 'recursive' strategy.
+ demo-merge/humans.txt | 1 +
+ demo-merge/robots.txt | 7 +++++++
+ 2 files changed, 8 insertions(+)
+ create mode 100644 demo-merge/robots.txt
+
+LENOVO@LAPTOP-STBUPON9 MINGW64 /d/SUNIL/Learning/GIT-GITHUB/demo-merge (master)
+$ git log --oneline --decorate --graph
+*   519d1ca (HEAD -> master) Merge branch 'no-ff-branch'
+|\
+| * d041b78 (no-ff-branch) social being
+| * 13de422 robots serve humans
+|/
+* ab308d8 human responsibilty
+* 4a2a73b robots changing life
+* e1285f8 good humans
+* 86b9c01 todays changes in the file
+
+LENOVO@LAPTOP-STBUPON9 MINGW64 /d/SUNIL/Learning/GIT-GITHUB/demo-merge (master)
+$ git branch
+* master
+  no-ff-branch
+
+LENOVO@LAPTOP-STBUPON9 MINGW64 /d/SUNIL/Learning/GIT-GITHUB/demo-merge (master)
+$ git branch -d no-ff-branch
+Deleted branch no-ff-branch (was d041b78).
+
+LENOVO@LAPTOP-STBUPON9 MINGW64 /d/SUNIL/Learning/GIT-GITHUB/demo-merge (master)
+$ git branch
+* master
+
+LENOVO@LAPTOP-STBUPON9 MINGW64 /d/SUNIL/Learning/GIT-GITHUB/demo-merge (master)
+$ git log --oneline --decorate --graph
+*   519d1ca (HEAD -> master) Merge branch 'no-ff-branch'
+|\
+| * d041b78 social being
+| * 13de422 robots serve humans
+|/
+* ab308d8 human responsibilty
+* 4a2a73b robots changing life
+* e1285f8 good humans
+* 86b9c01 todays changes in the file
+
+LENOVO@LAPTOP-STBUPON9 MINGW64 /d/SUNIL/Learning/GIT-GITHUB/demo-merge (master)
+$ ls -ltrh
+total 2.0K
+-rw-r--r-- 1 LENOVO 197121 170 Aug 24 21:39 humans.txt
+-rw-r--r-- 1 LENOVO 197121 176 Aug 24 21:39 robots.txt
+
+LENOVO@LAPTOP-STBUPON9 MINGW64 /d/SUNIL/Learning/GIT-GITHUB/demo-merge (master)
+$ cat humans.txt
+# humanstxt.org/
+# The humans responsible & technology colophon
+# Humans have both individual and collective responsibility
+# A human is a social being
+
+# TEAM
+
+
+
+LENOVO@LAPTOP-STBUPON9 MINGW64 /d/SUNIL/Learning/GIT-GITHUB/demo-merge (master)
+$ git status
+On branch master
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        ../GIT-Learning.txt
+        ../GIT-Projects/
+        ../GITHUB-Credentional.txt
+        ../Git-2.30.0-64-bit.exe
+        ../git-fast/
+        ../major-milestones
+
+nothing added to commit but untracked files present (use "git add" to track)
+
+LENOVO@LAPTOP-STBUPON9 MINGW64 /d/SUNIL/Learning/GIT-GITHUB/demo-merge (master)
+$ git add .
+
+LENOVO@LAPTOP-STBUPON9 MINGW64 /d/SUNIL/Learning/GIT-GITHUB/demo-merge (master)
+$ git status
+On branch master
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        ../GIT-Learning.txt
+        ../GIT-Projects/
+        ../GITHUB-Credentional.txt
+        ../Git-2.30.0-64-bit.exe
+        ../git-fast/
+        ../major-milestones
+
+nothing added to commit but untracked files present (use "git add" to track)
+
+LENOVO@LAPTOP-STBUPON9 MINGW64 /d/SUNIL/Learning/GIT-GITHUB/demo-merge (master)
+$ git commit -am "old changes"
+On branch master
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        ../GIT-Learning.txt
+        ../GIT-Projects/
+        ../GITHUB-Credentional.txt
+        ../Git-2.30.0-64-bit.exe
+        ../git-fast/
+        ../major-milestones
+
+nothing added to commit but untracked files present (use "git add" to track)
+
+LENOVO@LAPTOP-STBUPON9 MINGW64 /d/SUNIL/Learning/GIT-GITHUB/demo-merge (master)
+$ ls -ltrh
+total 2.0K
+-rw-r--r-- 1 LENOVO 197121 170 Aug 24 21:39 humans.txt
+-rw-r--r-- 1 LENOVO 197121 176 Aug 24 21:39 robots.txt
+
+LENOVO@LAPTOP-STBUPON9 MINGW64 /d/SUNIL/Learning/GIT-GITHUB/demo-merge (master)
+$ cd ..
+
+LENOVO@LAPTOP-STBUPON9 MINGW64 /d/SUNIL/Learning/GIT-GITHUB (master)
+$ ls -ltrh
+total 47M
+-rwxr-xr-x 1 LENOVO 197121 47M Jan  6  2021 Git-2.30.0-64-bit.exe*
+-rw-r--r-- 1 LENOVO 197121 225 Aug  5 23:05 GITHUB-Credentional.txt
+-rw-r--r-- 1 LENOVO 197121 124 Aug 18 15:47 major-milestones
+drwxr-xr-x 1 LENOVO 197121   0 Aug 20 11:44 GIT-Projects/
+drwxr-xr-x 1 LENOVO 197121   0 Aug 23 21:19 git-fast/
+drwxr-xr-x 1 LENOVO 197121   0 Aug 23 23:43 demo-branching/
+-rw-r--r-- 1 LENOVO 197121 47K Aug 23 23:48 GIT-Learning.txt
+drwxr-xr-x 1 LENOVO 197121   0 Aug 24 21:39 demo-merge/
+
+LENOVO@LAPTOP-STBUPON9 MINGW64 /d/SUNIL/Learning/GIT-GITHUB (master)
+$ git status
+On branch master
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        GIT-Learning.txt
+        GIT-Projects/
+        GITHUB-Credentional.txt
+        Git-2.30.0-64-bit.exe
+        git-fast/
+        major-milestones
+
+nothing added to commit but untracked files present (use "git add" to track)
+
+LENOVO@LAPTOP-STBUPON9 MINGW64 /d/SUNIL/Learning/GIT-GITHUB (master)
+$ git add .
+warning: adding embedded git repository: GIT-Projects
+hint: You've added another git repository inside your current repository.
+hint: Clones of the outer repository will not contain the contents of
+hint: the embedded repository and will not know how to obtain it.
+hint: If you meant to add a submodule, use:
+hint:
+hint:   git submodule add <url> GIT-Projects
+hint:
+hint: If you added this path by mistake, you can remove it from the
+hint: index with:
+hint:
+hint:   git rm --cached GIT-Projects
+hint:
+hint: See "git help submodule" for more information.
+warning: adding embedded git repository: git-fast/git-github
+warning: adding embedded git repository: git-fast/main-demo-repo-2
+warning: LF will be replaced by CRLF in git-fast/newfile.
+The file will have its original line endings in your working directory
+warning: LF will be replaced by CRLF in major-milestones.
+The file will have its original line endings in your working directory
+
+LENOVO@LAPTOP-STBUPON9 MINGW64 /d/SUNIL/Learning/GIT-GITHUB (master)
+$ git status
+On branch master
+Changes to be committed:
+  (use "git restore --staged <file>..." to unstage)
+        new file:   GIT-Learning.txt
+        new file:   GIT-Projects
+        new file:   GITHUB-Credentional.txt
+        new file:   Git-2.30.0-64-bit.exe
+        new file:   git-fast/git-github
+        new file:   git-fast/main-demo-repo-2
+        new file:   git-fast/newfile
+        new file:   major-milestones
+
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+  (commit or discard the untracked or modified content in submodules)
+        modified:   GIT-Projects (untracked content)
+        modified:   git-fast/git-github (modified content, untracked content)
+
+
+LENOVO@LAPTOP-STBUPON9 MINGW64 /d/SUNIL/Learning/GIT-GITHUB (master)
+$ cd GIT-Projects/
+
+LENOVO@LAPTOP-STBUPON9 MINGW64 /d/SUNIL/Learning/GIT-GITHUB/GIT-Projects (master)
+$ ls -ltrh
+total 14K
+-rw-r--r-- 1 LENOVO 197121 56 Oct 24  2018 README.md
+-rw-r--r-- 1 LENOVO 197121 11 Oct 24  2018 file2.txt
+-rw-r--r-- 1 LENOVO 197121 10 Oct 24  2018 file3.txt
+-rw-r--r-- 1 LENOVO 197121 36 Oct 24  2018 file1.txt
+-rw-r--r-- 1 LENOVO 197121 16 Jan  7  2021 README1.md
+-rw-r--r-- 1 LENOVO 197121  0 May 15 18:58 README2.md
+drwxr-xr-x 1 LENOVO 197121  0 Jun  7 11:42 myRepoFromExistingSource/
+drwxr-xr-x 1 LENOVO 197121  0 Jun  7 12:04 hellogitworld/
+drwxr-xr-x 1 LENOVO 197121  0 Jun  7 12:36 myRepoFromScratch/
+-rw-r--r-- 1 LENOVO 197121 10 Aug 20 11:44 file4.txt
+
+LENOVO@LAPTOP-STBUPON9 MINGW64 /d/SUNIL/Learning/GIT-GITHUB/GIT-Projects (master)
+$ git add .
+warning: adding embedded git repository: myRepoFromExistingSource
+hint: You've added another git repository inside your current repository.
+hint: Clones of the outer repository will not contain the contents of
+hint: the embedded repository and will not know how to obtain it.
+hint: If you meant to add a submodule, use:
+hint:
+hint:   git submodule add <url> myRepoFromExistingSource
+hint:
+hint: If you added this path by mistake, you can remove it from the
+hint: index with:
+hint:
+hint:   git rm --cached myRepoFromExistingSource
+hint:
+hint: See "git help submodule" for more information.
+
+LENOVO@LAPTOP-STBUPON9 MINGW64 /d/SUNIL/Learning/GIT-GITHUB/GIT-Projects (master)
+$ git status
+On branch master
+Your branch is ahead of 'origin/master' by 1 commit.
+  (use "git push" to publish your local commits)
+
+Changes to be committed:
+  (use "git restore --staged <file>..." to unstage)
+        new file:   myRepoFromExistingSource
+
+
+LENOVO@LAPTOP-STBUPON9 MINGW64 /d/SUNIL/Learning/GIT-GITHUB/GIT-Projects (master)
+$ git commit -am "old changes"
+[master 2096dde] old changes
+ 1 file changed, 1 insertion(+)
+ create mode 160000 myRepoFromExistingSource
+
+LENOVO@LAPTOP-STBUPON9 MINGW64 /d/SUNIL/Learning/GIT-GITHUB/GIT-Projects (master)
+$ cd ..
+
+LENOVO@LAPTOP-STBUPON9 MINGW64 /d/SUNIL/Learning/GIT-GITHUB (master)
+$ ls -ltrh
+total 47M
+-rwxr-xr-x 1 LENOVO 197121 47M Jan  6  2021 Git-2.30.0-64-bit.exe*
+-rw-r--r-- 1 LENOVO 197121 225 Aug  5 23:05 GITHUB-Credentional.txt
+-rw-r--r-- 1 LENOVO 197121 124 Aug 18 15:47 major-milestones
+drwxr-xr-x 1 LENOVO 197121   0 Aug 20 11:44 GIT-Projects/
+drwxr-xr-x 1 LENOVO 197121   0 Aug 23 21:19 git-fast/
+drwxr-xr-x 1 LENOVO 197121   0 Aug 23 23:43 demo-branching/
+-rw-r--r-- 1 LENOVO 197121 47K Aug 23 23:48 GIT-Learning.txt
+drwxr-xr-x 1 LENOVO 197121   0 Aug 24 21:39 demo-merge/
+
+LENOVO@LAPTOP-STBUPON9 MINGW64 /d/SUNIL/Learning/GIT-GITHUB (master)
+$ git commit -am "old changes"
+[master 684dd4d] old changes
+ 8 files changed, 1322 insertions(+)
+ create mode 100644 GIT-Learning.txt
+ create mode 160000 GIT-Projects
+ create mode 100644 GITHUB-Credentional.txt
+ create mode 100644 Git-2.30.0-64-bit.exe
+ create mode 160000 git-fast/git-github
+ create mode 160000 git-fast/main-demo-repo-2
+ create mode 100644 git-fast/newfile
+ create mode 100644 major-milestones
+
+LENOVO@LAPTOP-STBUPON9 MINGW64 /d/SUNIL/Learning/GIT-GITHUB (master)
+$ git status
+On branch master
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+  (commit or discard the untracked or modified content in submodules)
+        modified:   git-fast/git-github (modified content, untracked content)
+
+no changes added to commit (use "git add" and/or "git commit -a")
+
+LENOVO@LAPTOP-STBUPON9 MINGW64 /d/SUNIL/Learning/GIT-GITHUB (master)
+$ cd git-fast/git-github/
+
+LENOVO@LAPTOP-STBUPON9 MINGW64 /d/SUNIL/Learning/GIT-GITHUB/git-fast/git-github (master)
+$ git add .
+
+LENOVO@LAPTOP-STBUPON9 MINGW64 /d/SUNIL/Learning/GIT-GITHUB/git-fast/git-github (master)
+$ git commit -am "old changes"
+[master 9f38bf5] old changes
+ 2 files changed, 9 insertions(+)
+ create mode 100644 major-milestones
+
+LENOVO@LAPTOP-STBUPON9 MINGW64 /d/SUNIL/Learning/GIT-GITHUB/git-fast/git-github (master)
+$ git status
+On branch master
+Your branch is ahead of 'origin/master' by 1 commit.
+  (use "git push" to publish your local commits)
+
+nothing to commit, working tree clean
+
+LENOVO@LAPTOP-STBUPON9 MINGW64 /d/SUNIL/Learning/GIT-GITHUB/git-fast/git-github (master)
+$ cd ..
+
+LENOVO@LAPTOP-STBUPON9 MINGW64 /d/SUNIL/Learning/GIT-GITHUB/git-fast (master)
+$ git status
+On branch master
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+        modified:   git-github (new commits)
+
+no changes added to commit (use "git add" and/or "git commit -a")
+
+LENOVO@LAPTOP-STBUPON9 MINGW64 /d/SUNIL/Learning/GIT-GITHUB/git-fast (master)
+$ git add .
+
+LENOVO@LAPTOP-STBUPON9 MINGW64 /d/SUNIL/Learning/GIT-GITHUB/git-fast (master)
+$ git commit -am "old changes"
+[master 1a7a44c] old changes
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+LENOVO@LAPTOP-STBUPON9 MINGW64 /d/SUNIL/Learning/GIT-GITHUB/git-fast (master)
+$ git status
+On branch master
+nothing to commit, working tree clean
+
+LENOVO@LAPTOP-STBUPON9 MINGW64 /d/SUNIL/Learning/GIT-GITHUB/git-fast (master)
+$ cd ..
+
+LENOVO@LAPTOP-STBUPON9 MINGW64 /d/SUNIL/Learning/GIT-GITHUB (master)
+$ ls -ltrh
+total 47M
+-rwxr-xr-x 1 LENOVO 197121 47M Jan  6  2021 Git-2.30.0-64-bit.exe*
+-rw-r--r-- 1 LENOVO 197121 225 Aug  5 23:05 GITHUB-Credentional.txt
+-rw-r--r-- 1 LENOVO 197121 124 Aug 18 15:47 major-milestones
+drwxr-xr-x 1 LENOVO 197121   0 Aug 20 11:44 GIT-Projects/
+drwxr-xr-x 1 LENOVO 197121   0 Aug 23 21:19 git-fast/
+drwxr-xr-x 1 LENOVO 197121   0 Aug 23 23:43 demo-branching/
+-rw-r--r-- 1 LENOVO 197121 47K Aug 23 23:48 GIT-Learning.txt
+drwxr-xr-x 1 LENOVO 197121   0 Aug 24 21:39 demo-merge/
+
+LENOVO@LAPTOP-STBUPON9 MINGW64 /d/SUNIL/Learning/GIT-GITHUB (master)
+$ cd demo-merge/
+
+LENOVO@LAPTOP-STBUPON9 MINGW64 /d/SUNIL/Learning/GIT-GITHUB/demo-merge (master)
+$ git status
+On branch master
+nothing to commit, working tree clean
+
+LENOVO@LAPTOP-STBUPON9 MINGW64 /d/SUNIL/Learning/GIT-GITHUB/demo-merge (master)
+$ git checkout -b 3wm-branch
+Switched to a new branch '3wm-branch'
+
+LENOVO@LAPTOP-STBUPON9 MINGW64 /d/SUNIL/Learning/GIT-GITHUB/demo-merge (3wm-branch)
+$ ls
+humans.txt  robots.txt
+
+LENOVO@LAPTOP-STBUPON9 MINGW64 /d/SUNIL/Learning/GIT-GITHUB/demo-merge (3wm-branch)
+$ vim index.html
+
+LENOVO@LAPTOP-STBUPON9 MINGW64 /d/SUNIL/Learning/GIT-GITHUB/demo-merge (3wm-branch)
+$ ls
+humans.txt  index.html  robots.txt
+
+LENOVO@LAPTOP-STBUPON9 MINGW64 /d/SUNIL/Learning/GIT-GITHUB/demo-merge (3wm-branch)
+$ git add .
+warning: LF will be replaced by CRLF in demo-merge/index.html.
+The file will have its original line endings in your working directory
+
+LENOVO@LAPTOP-STBUPON9 MINGW64 /d/SUNIL/Learning/GIT-GITHUB/demo-merge (3wm-branch)
+$ git commit -am "modified index.html"
+[3wm-branch 543972c] modified index.html
+ 1 file changed, 3 insertions(+)
+ create mode 100644 demo-merge/index.html
+
+LENOVO@LAPTOP-STBUPON9 MINGW64 /d/SUNIL/Learning/GIT-GITHUB/demo-merge (3wm-branch)
+$ git checkout master
+Switched to branch 'master'
+
+LENOVO@LAPTOP-STBUPON9 MINGW64 /d/SUNIL/Learning/GIT-GITHUB/demo-merge (master)
+$ vim robots.txt
+
+LENOVO@LAPTOP-STBUPON9 MINGW64 /d/SUNIL/Learning/GIT-GITHUB/demo-merge (master)
+$ git commit -am "versatile rebots"
+[master 7736d3c] versatile rebots
+ 1 file changed, 1 insertion(+)
+
+LENOVO@LAPTOP-STBUPON9 MINGW64 /d/SUNIL/Learning/GIT-GITHUB/demo-merge (master)
+$ git log --oneline --decorate --graph --all
+* 7736d3c (HEAD -> master) versatile rebots
+| * 543972c (3wm-branch) modified index.html
+|/
+* 1a7a44c old changes
+* 684dd4d old changes
+*   519d1ca Merge branch 'no-ff-branch'
+|\
+| * d041b78 social being
+| * 13de422 robots serve humans
+|/
+* ab308d8 human responsibilty
+* 4a2a73b robots changing life
+* e1285f8 good humans
+* 86b9c01 todays changes in the file
+
+LENOVO@LAPTOP-STBUPON9 MINGW64 /d/SUNIL/Learning/GIT-GITHUB/demo-merge (master)
+$ git merge 3wm-branch -m "our first 3-way merge"
+Merge made by the 'recursive' strategy.
+ demo-merge/index.html | 3 +++
+ 1 file changed, 3 insertions(+)
+ create mode 100644 demo-merge/index.html
+
+LENOVO@LAPTOP-STBUPON9 MINGW64 /d/SUNIL/Learning/GIT-GITHUB/demo-merge (master)
+$ git branch -d 3wm-branch
+Deleted branch 3wm-branch (was 543972c).
+
+LENOVO@LAPTOP-STBUPON9 MINGW64 /d/SUNIL/Learning/GIT-GITHUB/demo-merge (master)
+$ git log --oneline --decorate --graph --all
+*   25d653f (HEAD -> master) our first 3-way merge
+|\
+| * 543972c modified index.html
+* | 7736d3c versatile rebots
+|/
+* 1a7a44c old changes
+* 684dd4d old changes
+*   519d1ca Merge branch 'no-ff-branch'
+|\
+| * d041b78 social being
+| * 13de422 robots serve humans
+|/
+* ab308d8 human responsibilty
+* 4a2a73b robots changing life
+* e1285f8 good humans
+* 86b9c01 todays changes in the file
+
+LENOVO@LAPTOP-STBUPON9 MINGW64 /d/SUNIL/Learning/GIT-GITHUB/demo-merge (master)
+$ ls
+humans.txt  index.html  robots.txt
+
+LENOVO@LAPTOP-STBUPON9 MINGW64 /d/SUNIL/Learning/GIT-GITHUB/demo-merge (master)
+$ cat index.html
+<head>
+<title>3 way merge</title>
+</head>
+
+LENOVO@LAPTOP-STBUPON9 MINGW64 /d/SUNIL/Learning/GIT-GITHUB/demo-merge (master)
+$ git status
+On branch master
+nothing to commit, working tree clean
+
+LENOVO@LAPTOP-STBUPON9 MINGW64 /d/SUNIL/Learning/GIT-GITHUB/demo-merge (master)
+$ git branch -a
+* master
+
+LENOVO@LAPTOP-STBUPON9 MINGW64 /d/SUNIL/Learning/GIT-GITHUB/demo-merge (master)
+$ git checkout -b long-feature
+Switched to a new branch 'long-feature'
+
+LENOVO@LAPTOP-STBUPON9 MINGW64 /d/SUNIL/Learning/GIT-GITHUB/demo-merge (long-feature)
+$ ls
+humans.txt  index.html  robots.txt
+
+LENOVO@LAPTOP-STBUPON9 MINGW64 /d/SUNIL/Learning/GIT-GITHUB/demo-merge (long-feature)
+$ vim 404.html
+
+LENOVO@LAPTOP-STBUPON9 MINGW64 /d/SUNIL/Learning/GIT-GITHUB/demo-merge (long-feature)
+$ git add .
+warning: LF will be replaced by CRLF in demo-merge/404.html.
+The file will have its original line endings in your working directory
+
+LENOVO@LAPTOP-STBUPON9 MINGW64 /d/SUNIL/Learning/GIT-GITHUB/demo-merge (long-feature)
+$ git commit -am "modified 404 page in 3 lines"
+[long-feature a3c80f0] modified 404 page in 3 lines
+ 1 file changed, 5 insertions(+)
+ create mode 100644 demo-merge/404.html
+
+LENOVO@LAPTOP-STBUPON9 MINGW64 /d/SUNIL/Learning/GIT-GITHUB/demo-merge (long-feature)
+$ git checkout master
+Switched to branch 'master'
+
+LENOVO@LAPTOP-STBUPON9 MINGW64 /d/SUNIL/Learning/GIT-GITHUB/demo-merge (master)
+$ vim 404.html
+
+LENOVO@LAPTOP-STBUPON9 MINGW64 /d/SUNIL/Learning/GIT-GITHUB/demo-merge (master)
+$ git add .
+warning: LF will be replaced by CRLF in demo-merge/404.html.
+The file will have its original line endings in your working directory
+
+LENOVO@LAPTOP-STBUPON9 MINGW64 /d/SUNIL/Learning/GIT-GITHUB/demo-merge (master)
+$ git commit -am "Error response for 404.html"
+[master 1c45162] Error response for 404.html
+ 1 file changed, 5 insertions(+)
+ create mode 100644 demo-merge/404.html
+
+LENOVO@LAPTOP-STBUPON9 MINGW64 /d/SUNIL/Learning/GIT-GITHUB/demo-merge (master)
+$ git log --oneline --decorate --graph --all
+* 1c45162 (HEAD -> master) Error response for 404.html
+| * a3c80f0 (long-feature) modified 404 page in 3 lines
+|/
+*   25d653f our first 3-way merge
+|\
+| * 543972c modified index.html
+* | 7736d3c versatile rebots
+|/
+* 1a7a44c old changes
+* 684dd4d old changes
+*   519d1ca Merge branch 'no-ff-branch'
+|\
+| * d041b78 social being
+| * 13de422 robots serve humans
+|/
+* ab308d8 human responsibilty
+* 4a2a73b robots changing life
+* e1285f8 good humans
+* 86b9c01 todays changes in the file
+
+LENOVO@LAPTOP-STBUPON9 MINGW64 /d/SUNIL/Learning/GIT-GITHUB/demo-merge (master)
+$ git difftool master long-feature
+
+LENOVO@LAPTOP-STBUPON9 MINGW64 /d/SUNIL/Learning/GIT-GITHUB/demo-merge (master)
+$ git merge long-feature
+CONFLICT (add/add): Merge conflict in demo-merge/404.html
+Auto-merging demo-merge/404.html
+Automatic merge failed; fix conflicts and then commit the result.
+
+LENOVO@LAPTOP-STBUPON9 MINGW64 /d/SUNIL/Learning/GIT-GITHUB/demo-merge (master|MERGING)
+$ vim 404.html
+
+LENOVO@LAPTOP-STBUPON9 MINGW64 /d/SUNIL/Learning/GIT-GITHUB/demo-merge (master|MERGING)
+$ git mergetool
+Merging:
+demo-merge/404.html
+
+Normal merge conflict for 'demo-merge/404.html':
+  {local}: created file
+  {remote}: created file
+error: invalid path './demo-merge/404_BASE_3324.html'
+
+LENOVO@LAPTOP-STBUPON9 MINGW64 /d/SUNIL/Learning/GIT-GITHUB/demo-merge (master|MERGING)
+$ git commit -am "resolved 3-way merge conflicts"
+[master 04e6be5] resolved 3-way merge conflicts
+
+LENOVO@LAPTOP-STBUPON9 MINGW64 /d/SUNIL/Learning/GIT-GITHUB/demo-merge (master)
+$ git status
+On branch master
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        404.html.orig
+
+nothing added to commit but untracked files present (use "git add" to track)
+
+LENOVO@LAPTOP-STBUPON9 MINGW64 /d/SUNIL/Learning/GIT-GITHUB/demo-merge (master)
+$ git log --oneline --decorate --graph -all
+error: switch `l' expects a numerical value
+
+LENOVO@LAPTOP-STBUPON9 MINGW64 /d/SUNIL/Learning/GIT-GITHUB/demo-merge (master)
+$ git log --oneline --decorate --graph
+*   04e6be5 (HEAD -> master) resolved 3-way merge conflicts
+|\
+| * a3c80f0 (long-feature) modified 404 page in 3 lines
+* | 1c45162 Error response for 404.html
+|/
+*   25d653f our first 3-way merge
+|\
+| * 543972c modified index.html
+* | 7736d3c versatile rebots
+|/
+* 1a7a44c old changes
+* 684dd4d old changes
+*   519d1ca Merge branch 'no-ff-branch'
+|\
+| * d041b78 social being
+| * 13de422 robots serve humans
+|/
+* ab308d8 human responsibilty
+* 4a2a73b robots changing life
+* e1285f8 good humans
+* 86b9c01 todays changes in the file
+
+LENOVO@LAPTOP-STBUPON9 MINGW64 /d/SUNIL/Learning/GIT-GITHUB/demo-merge (master)
+$ cat 404.html
+<head>
+
+LENOVO@LAPTOP-STBUPON9 MINGW64 /d/SUNIL/Learning/GIT-GITHUB/demo-merge (master)
+$ git status
+On branch master
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        404.html.orig
+
+nothing added to commit but untracked files present (use "git add" to track)
+
+LENOVO@LAPTOP-STBUPON9 MINGW64 /d/SUNIL/Learning/GIT-GITHUB/demo-merge (master)
+$ git status
+On branch master
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        404.html.orig
+
+nothing added to commit but untracked files present (use "git add" to track)
+
+LENOVO@LAPTOP-STBUPON9 MINGW64 /d/SUNIL/Learning/GIT-GITHUB/demo-merge (master)
+$ vim .gitignore
+
+LENOVO@LAPTOP-STBUPON9 MINGW64 /d/SUNIL/Learning/GIT-GITHUB/demo-merge (master)
+$ git status
+On branch master
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        .gitignore
+
+nothing added to commit but untracked files present (use "git add" to track)
+
+LENOVO@LAPTOP-STBUPON9 MINGW64 /d/SUNIL/Learning/GIT-GITHUB/demo-merge (master)
+$ git add .gitignore
+warning: LF will be replaced by CRLF in demo-merge/.gitignore.
+The file will have its original line endings in your working directory
+
+LENOVO@LAPTOP-STBUPON9 MINGW64 /d/SUNIL/Learning/GIT-GITHUB/demo-merge (master)
+$ git commit -am "creating .gitignore file to ignore temporary files generated during merge process"
+[master 0170fe5] creating .gitignore file to ignore temporary files generated during merge process
+ 1 file changed, 1 insertion(+)
+ create mode 100644 demo-merge/.gitignore
+
+LENOVO@LAPTOP-STBUPON9 MINGW64 /d/SUNIL/Learning/GIT-GITHUB/demo-merge (master)
+$ git status
+On branch master
+nothing to commit, working tree clean
+
+LENOVO@LAPTOP-STBUPON9 MINGW64 /d/SUNIL/Learning/GIT-GITHUB/demo-merge (master)
+$ git config --global mergetool.keepBackup false
+
+LENOVO@LAPTOP-STBUPON9 MINGW64 /d/SUNIL/Learning/GIT-GITHUB/demo-merge (master)
+$ git config --global --list
+user.email=sunilbhor_su1@yahoo.com
+user.name=sunilbhor
+core.editor='c:/program files (x86)/sublime text 3/subl.exe' -w
+diff.tool=p4merge
+difftool.p4merge.path=C:/Program Files/Perforce/p4merge.exe
+difftool.prompt=false
+merge.tool=p4merge
+mergetool.p4merge.path=C:/Program Files/Perforce/p4merge.exe
+mergetool.prompt=false
+mergetool.keepbackup=false
+
+LENOVO@LAPTOP-STBUPON9 MINGW64 /d/SUNIL/Learning/GIT-GITHUB/demo-merge (master)
+$ cd ..
+
+LENOVO@LAPTOP-STBUPON9 MINGW64 /d/SUNIL/Learning/GIT-GITHUB (master)
+$ mkdir demo-cherry-pick
+
+LENOVO@LAPTOP-STBUPON9 MINGW64 /d/SUNIL/Learning/GIT-GITHUB (master)
+$ cd demo-cherry-pick/
+
+LENOVO@LAPTOP-STBUPON9 MINGW64 /d/SUNIL/Learning/GIT-GITHUB/demo-cherry-pick (master)
+$ ls
+
+LENOVO@LAPTOP-STBUPON9 MINGW64 /d/SUNIL/Learning/GIT-GITHUB/demo-cherry-pick (master)
+$ git log --oneline | head -n 5
+0170fe5 creating .gitignore file to ignore temporary files generated during merge process
+04e6be5 resolved 3-way merge conflicts
+1c45162 Error response for 404.html
+a3c80f0 modified 404 page in 3 lines
+25d653f our first 3-way merge
+
+LENOVO@LAPTOP-STBUPON9 MINGW64 /d/SUNIL/Learning/GIT-GITHUB/demo-cherry-pick (master)
+$ git branch
+  long-feature
+* master
+
+LENOVO@LAPTOP-STBUPON9 MINGW64 /d/SUNIL/Learning/GIT-GITHUB/demo-cherry-pick (master)
+$ git checkout long-feature
+Switched to branch 'long-feature'
+
+LENOVO@LAPTOP-STBUPON9 MINGW64 /d/SUNIL/Learning/GIT-GITHUB/demo-cherry-pick (long-feature)
+$ git log --oneline | head -n 5
+a3c80f0 modified 404 page in 3 lines
+25d653f our first 3-way merge
+7736d3c versatile rebots
+543972c modified index.html
+1a7a44c old changes
+
+LENOVO@LAPTOP-STBUPON9 MINGW64 /d/SUNIL/Learning/GIT-GITHUB/demo-cherry-pick (long-feature)
+$ git checkout master
+Switched to branch 'master'
+
+LENOVO@LAPTOP-STBUPON9 MINGW64 /d/SUNIL/Learning/GIT-GITHUB/demo-cherry-pick (master)
+$ git cherry-pick a3c80f0
+CONFLICT (add/add): Merge conflict in demo-merge/404.html
+Auto-merging demo-merge/404.html
+error: could not apply a3c80f0... modified 404 page in 3 lines
+hint: after resolving the conflicts, mark the corrected paths
+hint: with 'git add <paths>' or 'git rm <paths>'
+hint: and commit the result with 'git commit'
+
+LENOVO@LAPTOP-STBUPON9 MINGW64 /d/SUNIL/Learning/GIT-GITHUB/demo-cherry-pick (master|CHERRY-PICKING)
+$ git mergetool
+Merging:
+demo-merge/404.html
+
+Normal merge conflict for 'demo-merge/404.html':
+  {local}: created file
+  {remote}: created file
+error: invalid path './demo-merge/404_BASE_3562.html'
+
+LENOVO@LAPTOP-STBUPON9 MINGW64 /d/SUNIL/Learning/GIT-GITHUB/demo-cherry-pick (master|CHERRY-PICKING)
+$ git status
+On branch master
+You are currently cherry-picking commit a3c80f0.
+  (all conflicts fixed: run "git cherry-pick --continue")
+  (use "git cherry-pick --skip" to skip this patch)
+  (use "git cherry-pick --abort" to cancel the cherry-pick operation)
+
+nothing to commit, working tree clean
+
+LENOVO@LAPTOP-STBUPON9 MINGW64 /d/SUNIL/Learning/GIT-GITHUB/demo-cherry-pick (master|CHERRY-PICKING)
+$ git cherry-pick --continue
+The previous cherry-pick is now empty, possibly due to conflict resolution.
+If you wish to commit it anyway, use:
+
+    git commit --allow-empty
+
+Otherwise, please use 'git cherry-pick --skip'
+On branch master
+You are currently cherry-picking commit a3c80f0.
+  (all conflicts fixed: run "git cherry-pick --continue")
+  (use "git cherry-pick --skip" to skip this patch)
+  (use "git cherry-pick --abort" to cancel the cherry-pick operation)
+
+nothing to commit, working tree clean
+
+LENOVO@LAPTOP-STBUPON9 MINGW64 /d/SUNIL/Learning/GIT-GITHUB/demo-cherry-pick (master|CHERRY-PICKING)
+$ git cherry-pick --skip
+
+LENOVO@LAPTOP-STBUPON9 MINGW64 /d/SUNIL/Learning/GIT-GITHUB/demo-cherry-pick (master)
+$ git status
+On branch master
+nothing to commit, working tree clean
+
+LENOVO@LAPTOP-STBUPON9 MINGW64 /d/SUNIL/Learning/GIT-GITHUB/demo-cherry-pick (master)
+$ git log --oneline | head -n 5
+0170fe5 creating .gitignore file to ignore temporary files generated during merge process
+04e6be5 resolved 3-way merge conflicts
+1c45162 Error response for 404.html
+a3c80f0 modified 404 page in 3 lines
+25d653f our first 3-way merge
+
+LENOVO@LAPTOP-STBUPON9 MINGW64 /d/SUNIL/Learning/GIT-GITHUB/demo-cherry-pick (master)
+$
+
